@@ -1,0 +1,32 @@
+.quotesWrapper{
+    background-color: rgb(249, 234, 236);
+
+    .imgQuotes{
+        text-align: center;
+        padding: 30px 0px;
+    }
+
+    .textContainer{
+        text-align: center;
+        p{
+            font-family: 'Circular-Loom';
+            color: rgb(180, 176, 176);
+            line-height: 1.5em;
+        }
+    }
+
+    .imageOfPerson{
+        text-align: center;
+        margin: 30px 0px;
+        img{
+            border-radius: 50%;
+        }
+    }
+
+    .personName{
+        text-align: center;
+        p{
+            padding-bottom: 30px;
+        }
+    }
+}

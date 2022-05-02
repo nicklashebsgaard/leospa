@@ -1,0 +1,29 @@
+.imageContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 100%;
+    gap: 5px;
+
+    img{
+        width: 100%;
+    }
+    .Four{
+        grid-column: 1/2;
+        
+    }
+
+    .Five{
+        grid-column: 2/3;
+       
+    }
+
+    .Six{
+        grid-column: 3/4;
+        
+    }
+
+    .Seven{
+        grid-column: 4/5;
+        
+    }
+}

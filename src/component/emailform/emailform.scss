@@ -1,0 +1,90 @@
+.formWrapper {
+    background-color: rgb(249, 234, 236);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 0.8fr;
+
+    .imageContainerEmail{
+        grid-column: 1/3;
+        img{
+            max-width: 100%;
+        }
+    }
+
+    .formContainer {
+        grid-column: 3/5;
+        grid-row: 1/2;
+        align-self: center;
+        margin-left: 60px;
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            text-align: center;
+            column-gap: 20px;
+            .Name{
+                grid-column: 1/2;
+            }
+
+            .Email{
+                grid-column: 2/-1;
+
+            }
+
+            .Service{
+                grid-column: 1/2;
+            }
+
+            .Phone {
+                grid-column: 2/-1;
+
+            }
+
+            .Month {
+                grid-column: 1/2;
+            }
+
+            .Time {
+                grid-column: 2/-1;
+            }
+        }
+            
+        input{
+            width: 100%;
+            background-color: rgb(249, 234, 236);
+            margin: 20px;
+            line-height: 3;
+            border: none;
+            box-shadow: #cecece77 0px 3px 0px 0px;
+        }
+
+        .notes{
+            grid-column: 1/-1;
+            .textNotes{
+                width: 100%;
+                background-color: rgb(249, 234, 236);
+                border: none;
+                margin: 20px;
+                box-shadow: #cecece77 0px 3px 0px 0px;
+                textarea{
+                    resize: none;
+                    height: max-content;
+                }
+            }
+        }
+    }
+    .btnAppointment{
+        display: flex;
+        margin-left: 20px;
+       button{
+        font-family: 'Circular-Loom';
+        padding: 18px 18px;
+        min-height: min-content;
+        border-radius: 25px;
+        border: none;
+        font-weight: bold;
+        color: white;
+        background-color: rgb(255,129,126);
+        } 
+    }
+    
+}

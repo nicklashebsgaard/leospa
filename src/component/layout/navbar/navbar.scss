@@ -1,0 +1,38 @@
+nav{
+    
+    ul{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+        padding-right: 50px;
+
+        .Logo{
+            grid-column: 1/2;
+            align-self: end;
+        }
+
+        .Home{
+            grid-column: 2/3;
+            align-self: end;
+        }
+
+        .About{
+            grid-column: 3/4;
+            align-self: end;
+        }
+
+        .Feature{
+            grid-column: 4/5;
+            align-self: end;
+        }
+
+        .Service{
+            grid-column: 5/6;
+            align-self: end;
+        }
+
+        .Contact{
+            grid-column: 6/7;
+            align-self: end;
+        }
+    }
+}
