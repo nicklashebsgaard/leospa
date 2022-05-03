@@ -16,7 +16,7 @@ router.get( '/', async ( req, res ) => {
 
     try {
 
-        let about = await About.findOne();
+        let about = await About.find();
 
         if ( about == null ) {
             return res.status( 404 ).json( { message: 'About kunne ikke findes' } );
@@ -42,7 +42,7 @@ router.put( '/admin/', async ( req, res ) => {
 
     try {
 
-        let about = await About.findOne();
+        let about = await About.find();
 
         about.title = req.body.title;
         about.content = req.body.content;

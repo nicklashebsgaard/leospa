@@ -21,7 +21,7 @@ const Team = () => {
         <div className="cardContainer">
             <div className="teamPerson">
                 <div className="imageHandler">
-                    <img src={PersonOne} alt="Joseph Austin" />
+                    <img src={PersonOne} alt="Joseph Austin" loading="lazy" />
                 </div>
                 
                 <div className="textHandler">
@@ -33,7 +33,7 @@ const Team = () => {
 
             <div className="teamPerson">
                 <div className="imageHandler">
-                    <img src={PersonTwo} alt="Joseph Austin" />
+                    <img src={PersonTwo} alt="Joseph Austin" loading="lazy" />
                 </div>
                 
                 <div className="textHandler">
@@ -45,7 +45,7 @@ const Team = () => {
 
             <div className="teamPerson">
                 <div className="imageHandler">
-                    <img src={PersonTree} alt="Joseph Austin" />
+                    <img src={PersonTree} alt="Joseph Austin" loading="lazy" />
                 </div>
                 
                 <div className="textHandler">

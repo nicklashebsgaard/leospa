@@ -71,6 +71,11 @@
                 }
             }
         }
+
+        textarea:focus, input:focus{
+            outline: none;
+        }
+        
     }
     .btnAppointment{
         display: flex;

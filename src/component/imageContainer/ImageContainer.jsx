@@ -16,10 +16,10 @@ const ImageContainer = () => {
   return (
 
     <div className="imageContainer">
-      <img className="Four" src={Four} alt="behanling" />
-      <img className="Five" src={Five} alt="behanling" />
-      <img className="Six" src={Six} alt="behanling" />
-      <img className="Seven" src={Seven} alt="behanling" />
+      <img className="Four" src={Four} alt="behanling" loading="lazy" />
+      <img className="Five" src={Five} alt="behanling" loading="lazy" />
+      <img className="Six" src={Six} alt="behanling" loading="lazy" />
+      <img className="Seven" src={Seven} alt="behanling" loading="lazy" />
     </div>
 
   );

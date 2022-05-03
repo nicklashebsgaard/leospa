@@ -11,7 +11,7 @@ const EmailForm = () => {
     <div className="formWrapper">
 
         <div className="imageContainerEmail">
-            <img src={Appointment} alt="Appointment" />
+            <img src={Appointment} alt="Appointment" loading="lazy" />
         </div>
 
         <div className="formContainer">

@@ -22,7 +22,7 @@ const Quotes = () => {
         </div>
 
         <div className="imageOfPerson">
-            <img src={PersonImage} alt="Girl" />
+            <img src={PersonImage} alt="Girl" loading="lazy" />
         </div>
 
         <div className="personName">

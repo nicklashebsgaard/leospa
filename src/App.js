@@ -5,6 +5,7 @@ import './reset.scss';
 // COMPONENT
 import Layout from './component/layout/Layout';
 import Home from './pages/home/Home';
+import Inspired from './component/inspired/Inspired';
 import ImageContainer from "./component/imageContainer/ImageContainer";
 import PopularProcedures from './component/popularProcedures/PopularProcedures';
 import Quotes from './component/quotes/Quotes';
@@ -20,6 +21,7 @@ const App = () => {
 
       <Layout>
         <Home />
+        <Inspired />
         <ImageContainer />
         <PopularProcedures />
         <Quotes />

@@ -7,9 +7,6 @@ import React, { useState, useEffect } from "react";
 // IMAGES
 import Leaf from "./../../assets/image/leaf.png";
 import Spa from "./../../assets/image/spa.png";
-import Rose from "./../../assets/image/china-rose.png";
-import Butterfly from "./../../assets/image/butterfly.png";
-import Jasmine from "./../../assets/image/jasmine.png";
 
 // ICON
 import PlayButton from "./../../assets/image/icons/play-icon-red.png";
@@ -20,10 +17,11 @@ import Navbar from "../../component/layout/navbar/Navbar";
 // AXIOS
 import Axios from "axios";
 
-// HELPERS
+// HELPERS API 
 import { hentHero } from "./../../helpers/Hero";
 
 const Home = () => {
+
   // STATE
 
   const [hero, setHero] = useState(); // til at rumme data fra API'et
@@ -70,7 +68,9 @@ const Home = () => {
       <header>
         
         {hero && (
+
           <>
+
             {hero.map(
               (item) =>
                 item.show && (
@@ -80,7 +80,7 @@ const Home = () => {
                     <Navbar /> {/* NAVIGATION-BAR */}
 
                     <div className="leafContainer">
-                      <img id="Leaf" src={Leaf} alt="leaf" />
+                      <img id="Leaf" src={Leaf} alt="leaf" loading="lazy" />
                     </div>
 
                     <div className="textContainer">
@@ -109,50 +109,22 @@ const Home = () => {
                     </div>
 
                     <div className="spaContainer">
-                      <img id="Spa" src={Spa} alt="spa" />
-                    </div>
-                    <div className="chinaRose">
-                      <img src={Rose} alt="Red Rose" />
-                    </div>
-                    <div className="Butterfly">
-                      <img src={Butterfly} alt="butterfly" />
-                    </div>
-                    <div className="Jasmine">
-                      <img src={Jasmine} alt="Jasmine flower" />
-                    </div>
-
-                    <div className="gridContainer">
-
-                    <div className="textContainerTwo">
-                      <p>ABOUT OUR SPA CENTER</p>
-                      <h2>Come and you will be Inspired!</h2>
-
-                      <p>
-                        It's the end of summer the sweltering heat makes human sweat in
-                        the night and makes the plants and trees wilt even in the
-                        moonlit nights.
-                      </p>
-                      <p>
-                        The eastern wind breeze bring an eerie feeling, that the monsoon
-                        clouds are soon comming, there is a strange silence in the ears,
-                        the sky gets darker and darker.
-                      </p>
-
-                      <div className="btnReadMore">
-                        <button>READ MORE</button>
-                      </div>
-                    </div>
+                      <img id="Spa" src={Spa} alt="spa" loading="lazy" />
                     </div>
                     
                   </div>
                 )
             )}
+
           </>
+
         )}
 
         {loading && 
-        <div> loader
-
+        <div> Loading ...
+          <span class="material-symbols-outlined" >
+          autorenew
+          </span>
         </div>
         }
 

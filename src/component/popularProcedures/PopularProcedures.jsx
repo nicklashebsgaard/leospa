@@ -20,7 +20,7 @@ const PopularProcedures = () => {
         <div className="cardContainer">
             <div className="popularCard">
                 <div className="imageHandler">
-                    <img src={One} alt="Masseage Therapy" />
+                    <img src={One} alt="Masseage Therapy" loading="lazy" />
                 </div>
                 
 
@@ -41,7 +41,7 @@ const PopularProcedures = () => {
 
             <div className="popularCard">
                 <div className="imageHandler">
-                    <img src={Two} alt="Beauty Care" />
+                    <img src={Two} alt="Beauty Care" loading="lazy" />
                 </div>
                 
 
@@ -62,7 +62,7 @@ const PopularProcedures = () => {
 
             <div className="popularCard">
                 <div className="imageHandler">
-                    <img src={Tree} alt="Executive Reflexology" />
+                    <img src={Tree} alt="Executive Reflexology" loading="lazy" />
                 </div>
                 
 

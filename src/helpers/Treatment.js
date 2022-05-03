@@ -7,13 +7,13 @@ const api ={
     baseUrl: 'http://localhost:5029/',
 }
 
-// about
+// Treatment
 
-export const hentAbout = () =>{
+export const hentTreatment = () =>{
 
-    // http://localhost:5029/about/
+    // http://localhost:5029/treatment/
 
-    let endpoint ="about/";
+    let endpoint ="treatment/";
 
     let response = axios.get( api.baseUrl + endpoint )
 

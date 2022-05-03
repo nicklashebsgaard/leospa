@@ -1,7 +1,7 @@
 // AXIOS
 import axios from "axios";
 
-// KALD TIL STARWARS API - SWAPI
+// KALD TIL MONGODB API 
 
 const api ={
     baseUrl: 'http://localhost:5029/',
@@ -32,4 +32,4 @@ export const hentHero = () =>{
 
     return response;
 
-}
+};
