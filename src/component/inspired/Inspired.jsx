@@ -9,9 +9,6 @@ import Rose from "./../../assets/image/china-rose.png";
 import Butterfly from "./../../assets/image/butterfly.png";
 import Jasmine from "./../../assets/image/jasmine.png";
 
-// SPINNERS
-
-
 // HELPERS API
 import { hentAbout } from "./../../helpers/About";
 
@@ -109,7 +106,7 @@ const Inspired = () => {
 
         {loading && 
         <div> Loading ...
-          <span class="material-symbols-outlined" >
+          <span className="material-symbols-outlined" >
           autorenew
           </span>
         </div>

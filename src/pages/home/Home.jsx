@@ -122,7 +122,7 @@ const Home = () => {
 
         {loading && 
         <div> Loading ...
-          <span class="material-symbols-outlined" >
+          <span className="material-symbols-outlined" >
           autorenew
           </span>
         </div>

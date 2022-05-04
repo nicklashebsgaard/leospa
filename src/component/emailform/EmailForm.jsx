@@ -15,7 +15,7 @@ const EmailForm = () => {
         </div>
 
         <div className="formContainer">
-            <form action="#">
+            <form /* action="#" */>
 
                 <div className="Name">
                     <input  placeholder="NAME" type="text" />
