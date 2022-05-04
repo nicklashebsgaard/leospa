@@ -25,12 +25,15 @@ const PopularProcedures = () => {
   // Opkald til API'et når component er loadet
 
   useEffect(() => {
+
     // Kald apiet - og gem data i state + håndter load og fejl
 
     setLoading(true);
 
     setTimeout(() => {
+
       hentTreatment()
+
         .then((data) => {
           if (data) {
             // Det er gået godt = data
@@ -42,14 +45,19 @@ const PopularProcedures = () => {
             setTreatment(); // nulstill/tøm evt. tidl. data
             setFejl(true);
           }
+
         })
         .finally(setLoading(false));
+
     }, 2000); // END of setTimeout
-  }, []);
+
+  }, []); // END of useEffect
 
   return (
 
     <>
+
+    <section>
 
       <div className="wrapperPopular">
 
@@ -77,7 +85,7 @@ const PopularProcedures = () => {
 
                       <div className="textHandler">
                         <h3>{item.title}</h3>
-                        <p>{item.content}</p>
+                        <p>{[item.content]}</p>
                       </div>
 
                       <div className="btnReadMore">
@@ -107,6 +115,8 @@ const PopularProcedures = () => {
 
       {fejl && <p>fejl</p>}
 
+    </section>
+    
     </>
 
   );
