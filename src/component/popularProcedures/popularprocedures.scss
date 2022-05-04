@@ -1,7 +1,7 @@
 .wrapperPopular{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 3.5fr;
+    grid-template-rows: 0fr 3.5fr;
     
     .textContainer{
         grid-column: 1/-1;
