@@ -114,9 +114,8 @@ const PopularProcedures = () => {
       )}
 
       {fejl && <p>fejl</p>}
-
+      
     </section>
-    
     </>
 
   );

@@ -13,8 +13,7 @@ import PersonTwo from "./../../assets/image/team/team2.jpg";
 import PersonTree from "./../../assets/image/team/team3.jpg";
 
 const Team = () => {
-
-    // STATE
+  // STATE
 
   const [team, setTeam] = useState(); // til at rumme data fra API'et
   const [loading, setLoading] = useState(false); // true når vi venter på data fra API'et
@@ -28,7 +27,6 @@ const Team = () => {
     setLoading(true);
 
     setTimeout(() => {
-
       hentTeam()
         .then((data) => {
           if (data) {
@@ -41,67 +39,64 @@ const Team = () => {
             setTeam(); // nulstill/tøm evt. tidl. data
             setFejl(true);
           }
-
         })
         .finally(setLoading(false));
-
     }, 2000); // END of setTimeout
-    
   }, []); // END of useEffect
 
   return (
-
-    <div className="teamWrapper">
-
-        <div className="textContainer">
-            <h2>Experienced Team</h2>
-            <p>To doesn't appear replenish together called he of mad place won't wherein blessed second every wherein</p>
-            <p>where meat kind wherein and martcin.</p>
-        </div>
-
-        <div className="cardContainer">
-            <div className="teamPerson">
-                <div className="imageHandler">
-                    <img src={PersonOne} alt="Joseph Austin" loading="lazy" />
-                </div>
-                
-                <div className="textHandler">
-                    <h3>Joseph Austin</h3>
-                    <p>Thai Message</p>  
-                </div>
-            
+    <>
+      <section>
+        <>
+          <div className="teamWrapper">
+            <div className="textContainer">
+              <h2>Experienced Team</h2>
+              <p>
+                To doesn't appear replenish together called he of mad place
+                won't wherein blessed second every wherein
+              </p>
+              <p>where meat kind wherein and martcin.</p>
             </div>
 
-            <div className="teamPerson">
-                <div className="imageHandler">
-                    <img src={PersonTwo} alt="Joseph Austin" loading="lazy" />
-                </div>
-                
-                <div className="textHandler">
-                    <h3>Joseph Austin</h3>
-                    <p>Thai Message</p>  
-                </div>
-            
+            <div className="cardContainer">
+              {team &&
+                team.map(
+                  (item) =>
+                    item && (
+                      <div className="teamPerson">
+                        <div className="imageHandler">
+                          <img
+
+                            src={ require( "./../../assets/image/team/" + item.image)}
+                            alt="Joseph Austin"
+                            loading="lazy"
+                          />
+                        </div>
+
+                        <div className="textHandler">
+                          <h3>
+                            {item.firstname} {item.lastname}
+                          </h3>
+                          <p>{item.role}</p>
+                        </div>
+                      </div>
+                    )
+                )}
             </div>
+          </div>
+        </>
 
-            <div className="teamPerson">
-                <div className="imageHandler">
-                    <img src={PersonTree} alt="Joseph Austin" loading="lazy" />
-                </div>
-                
-                <div className="textHandler">
-                    <h3>Joseph Austin</h3>
-                    <p>Thai Message</p>  
-                </div>
-            
-            </div>
+        {loading && (
+          <div>
+            Loading ...
+            <span className="material-symbols-outlined">autorenew</span>
+          </div>
+        )}
 
-        </div>
-
-    </div>
-
+        {fejl && <p>fejl</p>}
+      </section>
+    </>
   );
-
 };
 
 export default Team;

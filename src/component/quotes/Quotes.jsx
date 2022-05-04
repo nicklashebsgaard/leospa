@@ -94,7 +94,7 @@ const Quotes = () => {
         {loading && (
           <div>
             Loading ...
-            <span class="material-symbols-outlined">autorenew</span>
+            <span className="material-symbols-outlined">autorenew</span>
           </div>
         )}
 
