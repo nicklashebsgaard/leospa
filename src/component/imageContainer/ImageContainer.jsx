@@ -7,8 +7,6 @@ import React, { useState, useEffect } from "react";
 // HELPERS API
 import { hentTreatment } from "./../../helpers/Treatment";
 
-
-
 const ImageContainer = () => {
 
   const antal = 4;
@@ -22,12 +20,15 @@ const ImageContainer = () => {
   // Opkald til API'et når component er loadet
 
   useEffect(() => {
+
     // Kald apiet - og gem data i state + håndter load og fejl
 
     setLoading(true);
 
     setTimeout(() => {
+
       hentTreatment()
+
         .then((data) => {
           if (data) {
             // Det er gået godt = data
@@ -39,31 +40,56 @@ const ImageContainer = () => {
             setTreatment(); // nulstill/tøm evt. tidl. data
             setFejl(true);
           }
+
         })
         .finally(setLoading(false));
+
     }, 2000); // END of setTimeout
+
   }, []); // END of useEffect
 
   return (
+
     <>
+
       <section>
+
         <div className="imageContainer">
+
           {treatment &&
             treatment
               .slice(0, antal)
               .map(
                 (item) =>
-                  item && 
-                  <img 
-                  src={ require( "./../../assets/image/extra_procedures_etc/" + item.image)}
-                  alt="Massage" 
-                  loading="lazy" 
-                  />
+                  item && (
+                    <div className="imageFlex">
+                    <img
+                      src={require("./../../assets/image/extra_procedures_etc/" + item.image)}
+                      alt="Massage"
+                      loading="lazy"
+                    />
+                    </div>
+                  )
+
               )}
+
         </div>
+
       </section>
+
+      {/* {loading && (
+        <div>
+          Loading ...
+          <span className="material-symbols-outlined">autorenew</span>
+        </div>
+      )} */}
+
+      {fejl && <p>fejl</p>}
+
     </>
+
   );
+
 };
 
 export default ImageContainer;

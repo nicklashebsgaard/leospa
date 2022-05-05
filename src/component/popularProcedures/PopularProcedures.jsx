@@ -7,7 +7,8 @@ import React, { useState, useEffect } from "react";
 // HELPERS API
 import { hentTreatment } from "./../../helpers/Treatment";
 
-
+// PARSER
+import parse from 'html-react-parser';
 
 const PopularProcedures = () => {
 
@@ -77,12 +78,17 @@ const PopularProcedures = () => {
                     <div className="popularCard">
 
                       <div className="imageHandler">
-                        <img src={ require( "./../../assets/image/extra_procedures_etc/" + item.image)} alt="Masseage Therapy" loading="lazy" />
+                        <div className="imageFlex">
+                        <img 
+                        src={ require( "./../../assets/image/extra_procedures_etc/" + item.image)} 
+                        alt="Masseage Therapy" 
+                        loading="lazy" />
+                        </div>
                       </div>
 
                       <div className="textHandler">
                         <h3>{item.title}</h3>
-                        <p>{[item.content]}</p>
+                        <p>{parse(item.content)}</p>
                       </div>
 
                       <div className="btnReadMore">
@@ -103,12 +109,12 @@ const PopularProcedures = () => {
 
       </div>
 
-      {loading && (
+      {/* {loading && (
         <div>
           Loading ...
           <span className="material-symbols-outlined">autorenew</span>
         </div>
-      )}
+      )} */}
 
       {fejl && <p>fejl</p>}
       

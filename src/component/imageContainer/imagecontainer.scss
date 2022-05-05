@@ -4,9 +4,16 @@
     max-width: 100%;
     gap: 5px;
 
-    img{
-        width: 100%;
+    .imageFlex{
+        display: flex;
     }
+
+    img{
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
     .Four{
         grid-column: 1/2;
         

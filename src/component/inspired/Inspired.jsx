@@ -12,6 +12,9 @@ import Jasmine from "./../../assets/image/jasmine.png";
 // HELPERS API
 import { hentAbout } from "./../../helpers/About";
 
+// PARSER
+import parse from 'html-react-parser';
+
 const Inspired = () => {
 
   // STATE
@@ -85,7 +88,7 @@ const Inspired = () => {
                       <p>ABOUT OUR SPA CENTER</p>
                       <h2>{item.title}</h2>
 
-                      <p>{item.content}</p>
+                      <p>{ parse (item.content)}</p>
 
                       <div className="btnReadMore">
                         <button>READ MORE</button>
@@ -104,13 +107,13 @@ const Inspired = () => {
 
       )}
 
-        {loading && 
+        {/* {loading && 
         <div> Loading ...
           <span className="material-symbols-outlined" >
           autorenew
           </span>
         </div>
-        }
+        } */}
 
         {fejl && 
         <p>fejl</p>

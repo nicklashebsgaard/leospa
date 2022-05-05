@@ -1,70 +1,74 @@
-.wrapperPopular{
+.wrapperPopular {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0fr 3.5fr;
+
+  .textContainer {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    text-align: center;
+    h2 {
+      margin: 80px 0px 30px 0px;
+      font-size: 3em;
+    }
+
+    p {
+      color: rgb(180, 176, 176);
+      line-height: 1.5em;
+    }
+  }
+  .cardContainer {
+    grid-column: 2/5;
+    grid-row: 2/-1;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0fr 3.5fr;
-    
-    .textContainer{
-        grid-column: 1/-1;
-        grid-row: 1/2;
-        text-align: center;
-        h2 {
-            margin: 80px 0px 30px 0px;
-            font-size: 3em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 30px;
+  }
+  .popularCard {
+    border: 1px solid rgb(229, 229, 229);
+    margin-top: 75px;
+    height: fit-content;
+    .imageHandler {
+      margin: 15px;
+      .imageFlex {
+        display: flex;
+        img {
+          max-width: 100%;
+          height: auto;
+          object-fit: cover;
         }
-
-        p {
-            color: rgb(180, 176, 176);
-            line-height: 1.5em;
-        }
-    }
-    .cardContainer{
-        grid-column: 2/5;
-        grid-row: 2/-1;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        column-gap: 30px;
-    }
-    .popularCard {
-        border: 1px solid rgb(229, 229, 229);
-        margin-top: 75px;
-        height: fit-content;
-        .imageHandler{
-            margin: 15px;
-            img{
-                max-width: 100%;
-            }
-        }
-
-        .textHandler{
-            text-align: center;
-            margin: 15px;
-            h3{
-                margin: 5px 0px 10px 0px;
-                font-size: 1.2em;
-            }
-
-            p{
-                font-family: 'Circular-Loom';
-                color: rgb(180, 176, 176);
-                line-height: 1.5em;
-            }
-        }
-
-        .btnReadMore{
-            text-align: center;
-            button{
-                font-family: 'Circular-Loom';
-                margin: 50px;
-                padding: 10px 30px;
-                min-height: min-content;
-                border-radius: 25px;
-                border: none;
-                font-weight: bold;
-                color: white;
-                background-color: black;
-            }
-        }
+      }
     }
 
+    .textHandler {
+      text-align: center;
+      margin: 15px;
+      h3 {
+        margin: 5px 0px 10px 0px;
+        font-size: 1.2em;
+      }
+
+      p {
+        font-family: "Circular-Loom";
+        color: rgb(180, 176, 176);
+        line-height: 1.5em;
+      }
+    }
+
+    .btnReadMore {
+      text-align: center;
+      button {
+        font-family: "Circular-Loom";
+        margin: 50px;
+        padding: 10px 30px;
+        min-height: min-content;
+        border-radius: 25px;
+        border: none;
+        font-weight: bold;
+        color: white;
+        background-color: black;
+      }
+    }
+  }
 }

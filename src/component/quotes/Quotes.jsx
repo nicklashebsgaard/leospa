@@ -24,6 +24,7 @@ const Quotes = () => {
   // Opkald til API'et når component er loadet
 
   useEffect(() => {
+    
     // Kald apiet - og gem data i state + håndter load og fejl
 
     setLoading(true);
@@ -91,12 +92,12 @@ const Quotes = () => {
 
         </>
 
-        {loading && (
+        {/* {loading && (
           <div>
             Loading ...
             <span className="material-symbols-outlined">autorenew</span>
           </div>
-        )}
+        )} */}
 
         {fejl && <p>fejl</p>}
 

@@ -13,6 +13,7 @@ import PersonTwo from "./../../assets/image/team/team2.jpg";
 import PersonTree from "./../../assets/image/team/team3.jpg";
 
 const Team = () => {
+
   // STATE
 
   const [team, setTeam] = useState(); // til at rumme data fra API'et
@@ -22,12 +23,15 @@ const Team = () => {
   // Opkald til API'et når component er loadet
 
   useEffect(() => {
+
     // Kald apiet - og gem data i state + håndter load og fejl
 
     setLoading(true);
 
     setTimeout(() => {
+
       hentTeam()
+
         .then((data) => {
           if (data) {
             // det er gået godt = data
@@ -39,16 +43,24 @@ const Team = () => {
             setTeam(); // nulstill/tøm evt. tidl. data
             setFejl(true);
           }
+
         })
         .finally(setLoading(false));
+
     }, 2000); // END of setTimeout
+
   }, []); // END of useEffect
 
   return (
+
     <>
+
       <section>
+
         <>
+
           <div className="teamWrapper">
+
             <div className="textContainer">
               <h2>Experienced Team</h2>
               <p>
@@ -59,14 +71,16 @@ const Team = () => {
             </div>
 
             <div className="cardContainer">
+
               {team &&
                 team.map(
                   (item) =>
                     item && (
+
                       <div className="teamPerson">
+
                         <div className="imageHandler">
                           <img
-
                             src={ require( "./../../assets/image/team/" + item.image)}
                             alt="Joseph Austin"
                             loading="lazy"
@@ -79,24 +93,34 @@ const Team = () => {
                           </h3>
                           <p>{item.role}</p>
                         </div>
+
                       </div>
+
                     )
+
                 )}
+
             </div>
+
           </div>
+
         </>
 
-        {loading && (
+        {/* {loading && (
           <div>
             Loading ...
             <span className="material-symbols-outlined">autorenew</span>
           </div>
-        )}
+        )} */}
 
         {fejl && <p>fejl</p>}
+
       </section>
+
     </>
+
   );
+  
 };
 
 export default Team;

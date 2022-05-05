@@ -14,9 +14,6 @@ import PlayButton from "./../../assets/image/icons/play-icon-red.png";
 // COMPONENT
 import Navbar from "../../component/layout/navbar/Navbar";
 
-// AXIOS
-import Axios from "axios";
-
 // HELPERS API 
 import { hentHero } from "./../../helpers/Hero";
 
