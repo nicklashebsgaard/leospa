@@ -7,10 +7,7 @@ import React, { useState, useEffect } from "react";
 // HELPERS API
 import { hentTreatment } from "./../../helpers/Treatment";
 
-// IMAGES
-import One from "./../../assets/image/extra_procedures_etc/1.jpg";
-import Two from "./../../assets/image/extra_procedures_etc/2.jpg";
-import Tree from "./../../assets/image/extra_procedures_etc/3.jpg";
+
 
 const PopularProcedures = () => {
 
@@ -80,7 +77,7 @@ const PopularProcedures = () => {
                     <div className="popularCard">
 
                       <div className="imageHandler">
-                        <img src={One} alt="Masseage Therapy" loading="lazy" />
+                        <img src={ require( "./../../assets/image/extra_procedures_etc/" + item.image)} alt="Masseage Therapy" loading="lazy" />
                       </div>
 
                       <div className="textHandler">

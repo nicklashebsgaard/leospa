@@ -1,26 +1,69 @@
-// SCSS 
+// SCSS
 import "./imagecontainer.scss";
 
-//IMAGE FOR IMAGECONTAINER
-import Four from "./../../assets/image/extra_procedures_etc/4.jpg";
-import Five from "./../../assets/image/extra_procedures_etc/5.jpg";
-import Six from "./../../assets/image/extra_procedures_etc/6.jpg";
-import Seven from "./../../assets/image/extra_procedures_etc/7.jpg";
+// REACT useSTATE useEFFECT
+import React, { useState, useEffect } from "react";
+
+// HELPERS API
+import { hentTreatment } from "./../../helpers/Treatment";
+
 
 
 const ImageContainer = () => {
 
+  const antal = 4;
+
+  // STATE
+
+  const [treatment, setTreatment] = useState();
+  const [loading, setLoading] = useState(false);
+  const [fejl, setFejl] = useState(false);
+
+  // Opkald til API'et når component er loadet
+
+  useEffect(() => {
+    // Kald apiet - og gem data i state + håndter load og fejl
+
+    setLoading(true);
+
+    setTimeout(() => {
+      hentTreatment()
+        .then((data) => {
+          if (data) {
+            // Det er gået godt = data
+            console.log(data);
+            setTreatment(data); // put data fra api'et i state
+            setFejl(false); // nustill en evt. tidligere fejl
+          } else {
+            // Det gik ikke så gdot = fejl/null
+            setTreatment(); // nulstill/tøm evt. tidl. data
+            setFejl(true);
+          }
+        })
+        .finally(setLoading(false));
+    }, 2000); // END of setTimeout
+  }, []); // END of useEffect
+
   return (
-
-    <div className="imageContainer">
-      <img className="Four" src={Four} alt="Massage" loading="lazy" />
-      <img className="Five" src={Five} alt="Hot stone massage" loading="lazy" />
-      <img className="Six" src={Six} alt="Waxing" loading="lazy" />
-      <img className="Seven" src={Seven} alt="Relax" loading="lazy" />
-    </div>
-
+    <>
+      <section>
+        <div className="imageContainer">
+          {treatment &&
+            treatment
+              .slice(0, antal)
+              .map(
+                (item) =>
+                  item && 
+                  <img 
+                  src={ require( "./../../assets/image/extra_procedures_etc/" + item.image)}
+                  alt="Massage" 
+                  loading="lazy" 
+                  />
+              )}
+        </div>
+      </section>
+    </>
   );
-
 };
 
 export default ImageContainer;
