@@ -17,6 +17,7 @@ import Navbar from "../../component/layout/navbar/Navbar";
 // HELPERS API 
 import { hentHero } from "./../../helpers/Hero";
 
+
 const Home = () => {
 
   // STATE

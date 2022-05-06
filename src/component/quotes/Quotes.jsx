@@ -57,8 +57,6 @@ const Quotes = () => {
 
       <section>
 
-        <>
-
           {recommendation &&
             recommendation.slice(0, antal).map(
               (item) =>
@@ -89,8 +87,6 @@ const Quotes = () => {
                 )
 
             )}
-
-        </>
 
         {/* {loading && (
           <div>
