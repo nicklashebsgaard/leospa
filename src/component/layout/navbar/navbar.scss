@@ -1,8 +1,9 @@
 nav{
     
-    ul{
+    .TRY {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+        text-align: center;
         padding-right: 50px;
 
         .Logo{
