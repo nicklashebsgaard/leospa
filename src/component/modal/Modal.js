@@ -4,6 +4,8 @@ import "./modal.scss";
 // REACT / useSTATE
 import React, { useState } from "react";
 
+// Site https://www.kindacode.com/article/how-to-make-a-modal-box-from-scratch-in-reactjs/
+
 const Modal = () => {
 
   const [isOpen, setIsOpen] = useState(false);

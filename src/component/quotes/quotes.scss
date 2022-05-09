@@ -30,4 +30,17 @@
             padding-bottom: 30px;
         }
     }
+
 }
+.slide-visible {
+    background-color: rgb(249, 234, 236);
+}
+
+.slider-control-centerleft{
+    display: none;
+}
+.slider-control-centerright{
+    margin: 20px;
+    display: none;
+}
+

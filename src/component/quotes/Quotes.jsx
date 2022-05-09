@@ -4,6 +4,9 @@ import "./quotes.scss";
 // REACT useSTATE useEFFECT
 import React, { useState, useEffect } from "react";
 
+// Carousel - NPM https://www.npmjs.com/package/nuka-carousel
+import Carousel from 'nuka-carousel';
+
 // IMAGES
 import QuoteImage from "./../../assets/image/quote.png";
 import PersonImage from "./../../assets/image/customers/client-1.png";
@@ -13,7 +16,7 @@ import { hentRecommendation } from "./../../helpers/Recommendation";
 
 const Quotes = () => {
 
-    const antal = 1;
+    const antal = 3;
 
   // STATE
 
@@ -56,7 +59,7 @@ const Quotes = () => {
     <>
 
       <section>
-
+        <Carousel >
           {recommendation &&
             recommendation.slice(0, antal).map(
               (item) =>
@@ -65,7 +68,9 @@ const Quotes = () => {
                   <div className="quotesWrapper">
 
                     <div className="imgQuotes">
-                      <img src={QuoteImage} alt="Quotes" />
+                      <img src={QuoteImage} 
+                      alt="Quotes"
+                      loading="lazy" />
                     </div>
 
                     <div className="textContainer">
@@ -73,7 +78,10 @@ const Quotes = () => {
                     </div>
 
                     <div className="imageOfPerson">
-                      <img src={PersonImage} alt="Girl" loading="lazy" />
+                      <img 
+                      src={ require( "./../../assets/image/customers/" + item.image)} 
+                      alt="Girl" 
+                      loading="lazy" />
                     </div>
 
                     <div className="personName">
@@ -89,7 +97,7 @@ const Quotes = () => {
             )}
 
         {fejl && <p>fejl</p>}
-
+        </Carousel>
       </section>
 
     </>

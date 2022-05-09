@@ -95,12 +95,12 @@ const Home = () => {
                         <div className="btnReserve">
                           <button>RESERVE NOW</button>
                         </div>
-                        <Modal>
+                        
                         <div className="btnPlay">
                           <button>
                             <img src={PlayButton} alt="Play Button" />
                           </button>
-                        </div></Modal>
+                        </div>
                         <p>Watch our story </p>
                       </div>
 
