@@ -13,7 +13,7 @@ import PlayButton from "./../../assets/image/icons/play-icon-red.png";
 
 // COMPONENT
 import Navbar from "../../component/layout/navbar/Navbar";
-
+import Modal from "./../../component/modal/Modal";
 // HELPERS API 
 import { hentHero } from "./../../helpers/Hero";
 
@@ -95,12 +95,12 @@ const Home = () => {
                         <div className="btnReserve">
                           <button>RESERVE NOW</button>
                         </div>
-
+                        <Modal>
                         <div className="btnPlay">
                           <button>
                             <img src={PlayButton} alt="Play Button" />
                           </button>
-                        </div>
+                        </div></Modal>
                         <p>Watch our story </p>
                       </div>
 

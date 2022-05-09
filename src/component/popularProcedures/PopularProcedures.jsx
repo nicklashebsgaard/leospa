@@ -109,16 +109,10 @@ const PopularProcedures = () => {
 
       </div>
 
-      {/* {loading && (
-        <div>
-          Loading ...
-          <span className="material-symbols-outlined">autorenew</span>
-        </div>
-      )} */}
-
       {fejl && <p>fejl</p>}
       
     </section>
+
     </>
 
   );
