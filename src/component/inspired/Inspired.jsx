@@ -10,7 +10,7 @@ import Butterfly from "./../../assets/image/butterfly.png";
 import Jasmine from "./../../assets/image/jasmine.png";
 
 // HELPERS API
-import { hentAbout } from "./../../helpers/About";
+import { hentAbout } from "./../../helpers/apikald";
 
 // PARSER
 import parse from 'html-react-parser';
@@ -69,7 +69,7 @@ const Inspired = () => {
           {about.map(
             (item) =>
               item && (
-                <div className="inspiredWrapper">
+                <div className="inspiredWrapper" key={item._id}>
 
                   <div className="chinaRose">
                     <img src={Rose} alt="Red Rose" />

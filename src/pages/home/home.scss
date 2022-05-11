@@ -1,89 +1,89 @@
 @import "./../../global.scss";
+#popularSection{
+    margin-bottom: 50px;
+}
+.wrapperContainer {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 0.7fr 3fr 1fr 2fr 2fr;
+  grid-template-rows: 0.5fr 4fr;
 
-.wrapperContainer{
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 0.7fr 3fr 1fr 2fr 2fr;
-    grid-template-rows: 0.5fr 4fr;
-    
-    .navbar{
-        grid-column: 3/6;
-        grid-row: 1/2;
-        font-family: 'Circular-Loom';
+  .navbar {
+    grid-column: 3/6;
+    grid-row: 1/2;
+    font-family: "Circular-Loom";
+  }
+
+  .leafContainer {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .textContainer {
+    grid-column: 3/5;
+    grid-row: 2/3;
+    margin-top: 100px;
+
+    p:nth-child(1) {
+      color: rgb(255, 129, 126);
+      line-height: 6;
+      text-transform: uppercase;
     }
 
-    .leafContainer{
-        grid-column: 1/2;
-        grid-row: 2/3;
-        img{
-            max-width: 100%;
-        }
+    h1 {
+      font-size: 4em;
+      margin: 0px 0px 40px 0px;
     }
 
-    .textContainer{
-        grid-column: 3/5;
-        grid-row: 2/3;
-        margin-top: 100px;
-        
-        p:nth-child(1) {
-            color: rgb(255,129,126);
-            line-height: 6;
-            text-transform: uppercase;
-        }
-
-        h1{
-            font-size: 4em;
-            margin: 0px 0px 40px 0px;
-        }
-
-        p{
-            font-family: 'Circular-Loom';
-            color: rgb(180, 176, 176);
-            line-height: 2;
-        }
-        
-        .miniContainer {
-            display: flex;
-            align-items: center;
-            margin: 30px 0px 0px 0px;
-        }
-        .btnReserve{
-
-            button{
-                font-family: 'Circular-Loom';
-                border: none;
-                padding: 18px;
-                color: white;
-                font-weight: bold;
-                background-color: rgb(255,129,126);
-            }
-        }
-
-        .btnPlay {
-            
-            button{
-                margin: 0px 15px;
-                background-color: rgb(235, 220, 206);
-                border: none;
-                border-radius: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                img{
-                    width: 25px;
-                    height: 25px;
-                }
-            }
-        }
-    } // End textContainer scss
-
-    .spaContainer{
-        grid-column: 5/-1;
-        grid-row: 1/3;
-
-        img{
-            max-width: 100%;
-        }
+    p {
+      font-family: "Circular-Loom";
+      color: rgb(180, 176, 176);
+      line-height: 2;
     }
-    
+
+    .miniContainer {
+      display: flex;
+      align-items: center;
+      margin: 30px 0px 0px 0px;
+    }
+    .btnReserve {
+      button {
+        font-family: "Circular-Loom";
+        border: none;
+        padding: 18px;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(255, 129, 126);
+      }
+    }
+
+    .btnPlay {
+      button {
+        margin: 0px 15px;
+        background-color: rgb(235, 220, 206);
+        border: none;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+        img {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+  } // End textContainer scss
+
+  .spaContainer {
+    grid-column: 5/-1;
+    grid-row: 1/3;
+
+    img {
+      max-width: 100%;
+    }
+  }
 } // End Of WrapperContainer Scss
-

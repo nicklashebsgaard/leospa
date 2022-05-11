@@ -8,15 +8,14 @@ import React, { useState, useEffect } from "react";
 import Leaf from "./../../assets/image/leaf.png";
 import Spa from "./../../assets/image/spa.png";
 
-// ICON
+// PLAY ICON
 import PlayButton from "./../../assets/image/icons/play-icon-red.png";
-
 // COMPONENT
 import Navbar from "../../component/layout/navbar/Navbar";
 import Modal from "./../../component/modal/Modal";
-// HELPERS API 
-import { hentHero } from "./../../helpers/Hero";
 
+// HELPERS API 
+import { hentHero } from "./../../helpers/apikald";
 
 const Home = () => {
 
@@ -42,7 +41,7 @@ const Home = () => {
 
           if (data) {
             // det er gået godt = data
-            console.log(data);
+            /* console.log(data); */
             setHero(data);  // put data fra api'et i state
             setFejl(false); // nulstill en evt. tidligere fejl
 
@@ -59,6 +58,11 @@ const Home = () => {
 
   }, []); // END of useEffect
 
+  const handleToggleModal = () => {
+    let target = document.querySelector("#modal");
+    target.classList.toggle("active");
+  }
+
   return (
 
     <>
@@ -73,12 +77,15 @@ const Home = () => {
               (item) =>
                 item.show && (
 
-                  <div className="wrapperContainer">
+                  <div className="wrapperContainer" key={item._id}>
 
                     <Navbar /> {/* NAVIGATION-BAR */}
 
                     <div className="leafContainer">
-                      <img id="Leaf" src={Leaf} alt="leaf" loading="lazy" />
+                      <img id="Leaf" 
+                      src={Leaf} 
+                      alt="leaf" 
+                      loading="lazy" />
                     </div>
 
                     <div className="textContainer">
@@ -95,19 +102,36 @@ const Home = () => {
                         <div className="btnReserve">
                           <button>RESERVE NOW</button>
                         </div>
+
                         
                         <div className="btnPlay">
-                          <button>
-                            <img src={PlayButton} alt="Play Button" />
-                          </button>
+                          <button onClick={ handleToggleModal }><img src={PlayButton} alt="Play Button" /></button>
+                          <Modal>
+                            <iframe 
+                            width="80%" 
+                            height="80%"
+                            src={("https://www.youtube.com/embed/" + item.link + "?autoplay=1")}  
+                            title="YouTube video player" 
+                            frameBorder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowFullScreen
+                            >
+                            </iframe>
+                          </Modal>
                         </div>
+                       
+                        
                         <p>Watch our story </p>
+
                       </div>
 
                     </div>
 
                     <div className="spaContainer">
-                      <img id="Spa" src={Spa} alt="spa" loading="lazy" />
+                      <img id="Spa" 
+                      src={Spa} 
+                      alt="spa" 
+                      loading="lazy" />
                     </div>
                     
                   </div>

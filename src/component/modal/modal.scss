@@ -1,57 +1,45 @@
-.overlay {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+#modal {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 50;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  &.active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .togglemodal {
+      width: 70%;
+      height: 70%;
+      padding: 20px;
+      background-color: white;
+      min-height: 400px;
+      position: relative;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: -webkit-center;
+      
+      button {
+          position: absolute;
+          right: 15px;
+          top: 15px;
+          padding: 5px;
+          border: none;
+          background: none;
+          font-size: 12px;
+          cursor: pointer;
+      }
+      
+  }
 }
 
-.modal {
-  position: fixed;
-  z-index: 20;
-  background: #fff;
-  width: 500px;
-
-  /* Center the modal */
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.modal__header {
-  background: rgb(133, 106, 96);
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.modal__main {
-  padding: 20px;
-}
-
-.close-button {
-  border: none;
-  background: transparent;
-  padding: 10px;
-  cursor: pointer;
-  color: #fff;
-  font-size: 36px;
-}
-
-.close-button:hover {
-  color: yellow;
-}
-
-.button {
-  background: green;
-  border: none;
-  padding: 10px 20px;
-  color: #fff;
-  cursor: pointer;
-}
-
-.button:hover {
-  background: orange;
+@media (max-width: 600px) {
+  .togglemodal {
+      min-width: 80%;
+  }
 }

@@ -1,14 +1,22 @@
+.navbar{
+    z-index: 30;
+}
 nav{
     
-    .TRY {
+    .navWrapper {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
         text-align: center;
         padding-right: 50px;
-
+        
+        li{
+            cursor: pointer;
+        }
+        
         .Logo{
             grid-column: 1/2;
             align-self: end;
+            cursor: pointer;
         }
 
         .Home{

@@ -12,11 +12,9 @@ import QuoteImage from "./../../assets/image/quote.png";
 import PersonImage from "./../../assets/image/customers/client-1.png";
 
 // HELPERS API
-import { hentRecommendation } from "./../../helpers/Recommendation";
+import { hentRecommendation } from "./../../helpers/apikald";
 
 const Quotes = () => {
-
-    const antal = 3;
 
   // STATE
 
@@ -38,7 +36,7 @@ const Quotes = () => {
         .then((data) => {
           if (data) {
             // det er gået godt = data
-            console.log(data);
+            /* console.log(data); */
             setRecommendation(data); // put data fra api'et i state
             setFejl(false); // nulstill en evt. tidligere fejl
           } else {
@@ -61,11 +59,11 @@ const Quotes = () => {
       <section>
         <Carousel >
           {recommendation &&
-            recommendation.slice(0, antal).map(
+            recommendation.slice(0, 3).map(
               (item) =>
                 item && (
 
-                  <div className="quotesWrapper">
+                  <div className="quotesWrapper" key={item._id}>
 
                     <div className="imgQuotes">
                       <img src={QuoteImage} 
@@ -97,6 +95,7 @@ const Quotes = () => {
             )}
 
         {fejl && <p>fejl</p>}
+
         </Carousel>
       </section>
 

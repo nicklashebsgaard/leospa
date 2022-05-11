@@ -5,10 +5,7 @@ import "./popularprocedures.scss";
 import React, { useState, useEffect } from "react";
 
 // HELPERS API
-import { hentTreatment } from "./../../helpers/Treatment";
-
-// PARSER
-import parse from 'html-react-parser';
+import { hentTreatment } from "./../../helpers/apikald";
 
 const PopularProcedures = () => {
 
@@ -35,7 +32,7 @@ const PopularProcedures = () => {
         .then((data) => {
           if (data) {
             // Det er gået godt = data
-            console.log(data);
+            /* console.log(data); */
             setTreatment(data); // put data fra api'et i state
             setFejl(false); // nustill en evt. tidligere fejl
           } else {
@@ -51,11 +48,19 @@ const PopularProcedures = () => {
 
   }, []); // END of useEffect
 
+  const klipTekst = (txt, minAntalKarakterer) => {
+
+  txt = txt.replace( /<\/?[^>]+(>|$)/g, "" ); // fjern alle html-tags med regex (regular expressions)       
+  txt = txt.substring( 0, txt.indexOf( " ", minAntalKarakterer ) ); // udtræk den bid af teksten fra plads 0 til "maxAntalKarakterer" men ved et mellemrum  
+  return txt; // returner resultatet 
+
+  }
+
   return (
 
     <>
 
-    <section>
+    <section id="popularSection">
 
       <div className="wrapperPopular">
 
@@ -75,7 +80,7 @@ const PopularProcedures = () => {
                 (item) =>
                   item && (
 
-                    <div className="popularCard">
+                    <div className="popularCard" key={item._id}>
 
                       <div className="imageHandler">
                         <div className="imageFlex">
@@ -88,7 +93,7 @@ const PopularProcedures = () => {
 
                       <div className="textHandler">
                         <h3>{item.title}</h3>
-                        <p>{parse(item.content)}</p>
+                        <p>{klipTekst(item.content, 100)}...</p>
                       </div>
 
                       <div className="btnReadMore">

@@ -15,25 +15,25 @@ const EmailForm = () => {
         </div>
 
         <div className="formContainer">
-            <form /* action="#" */>
+            <form action="#" autoComplete="on">
 
                 <div className="Name">
-                    <input  placeholder="NAME" type="text" />
+                    <input required id="Name" placeholder="NAME" type="text" />
                 </div>
                 <div className="Email">
-                    <input  placeholder="EMAIL ADDRESS" type="emil" />
+                    <input required id="Email" placeholder="EMAIL ADDRESS" type="email" />
                 </div>
                 <div className="Service">
-                    <input placeholder="SELECT SERVICE" type="text" />
+                    <input required id="Service" placeholder="SELECT SERVICE" type="text" />
                 </div>
                 <div className="Phone">
-                    <input placeholder="PHONE NUMER" type="tel" />
+                    <input required id="Phone" placeholder="PHONE NUMER" type="tel" />
                 </div>
                 <div className="Month">
-                    <input type="month" />
+                    <input required id="Month" type="month" />
                 </div>
-                <div className="Time">
-                    <input type="time" />
+                <div className="Date">
+                    <input required id="Date" type="time" />
                 </div>
 
                 <div className="notes">

@@ -11,6 +11,7 @@ footer{
         margin: 80px 0px 40px 0px;
         text-align: center;
         img{
+            cursor: pointer;
             max-width: 100%;
             height: auto;
         }
@@ -25,6 +26,7 @@ footer{
                 grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
                 li{
+                    cursor: pointer;
                     margin: 0px 20px;
                 }
                 .homeFooter{
@@ -57,6 +59,7 @@ footer{
         max-width: 100%;
         margin: 50px 0px; 
         img{
+            cursor: pointer;
             height: 20px;
             padding: 0px 20px;
         }

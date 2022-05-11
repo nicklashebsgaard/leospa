@@ -11,7 +11,7 @@ export const Navbar = () => {
     <div className="navbar">
 
       <nav>
-        <ul className="TRY">
+        <ul className="navWrapper">
             <div className="Logo"><img src={Logo} alt="Leospa Logo" /></div>
             <li className="Home">HOME</li>
             <li className="About">ABOUT</li>

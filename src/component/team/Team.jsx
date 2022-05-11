@@ -5,12 +5,7 @@ import "./team.scss";
 import React, { useState, useEffect } from "react";
 
 // HELPERS API
-import { hentTeam } from "./../../helpers/Team";
-
-// IMAGES
-import PersonOne from "./../../assets/image/team/team1.jpg";
-import PersonTwo from "./../../assets/image/team/team2.jpg";
-import PersonTree from "./../../assets/image/team/team3.jpg";
+import { hentTeam } from "./../../helpers/apikald";
 
 const Team = () => {
 
@@ -35,7 +30,7 @@ const Team = () => {
         .then((data) => {
           if (data) {
             // det er gået godt = data
-            console.log(data);
+            /* console.log(data); */
             setTeam(data); // put data fra api'et i state
             setFejl(false); // nulstill en evt. tidligere fejl
           } else {
@@ -77,7 +72,7 @@ const Team = () => {
                   (item) =>
                     item && (
 
-                      <div className="teamPerson">
+                      <div className="teamPerson" key={item._id}>
 
                         <div className="imageHandler">
                           <img

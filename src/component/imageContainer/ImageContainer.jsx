@@ -5,11 +5,10 @@ import "./imagecontainer.scss";
 import React, { useState, useEffect } from "react";
 
 // HELPERS API
-import { hentTreatment } from "./../../helpers/Treatment";
+import { hentTreatment } from "./../../helpers/apikald";
 
 const ImageContainer = () => {
 
-  const antal = 4;
 
   // STATE
 
@@ -58,11 +57,11 @@ const ImageContainer = () => {
 
           {treatment &&
             treatment
-              .slice(0, antal)
+              .slice(0, 4)
               .map(
                 (item) =>
                   item && (
-                    <div className="imageFlex">
+                    <div className="imageFlex" key={item._id}>
                     <img
                       src={require("./../../assets/image/extra_procedures_etc/" + item.image)}
                       alt="Massage"
