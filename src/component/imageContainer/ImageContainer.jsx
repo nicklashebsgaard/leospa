@@ -9,7 +9,6 @@ import { hentTreatment } from "./../../helpers/apikald";
 
 const ImageContainer = () => {
 
-
   // STATE
 
   const [treatment, setTreatment] = useState();
@@ -47,12 +46,34 @@ const ImageContainer = () => {
 
   }, []); // END of useEffect
 
+ /*  var imgArr = [
+
+    "./../../assets/image/extra_procedures_etc/CelluliteReduction.jpg", 
+    "./../../assets/image/extra_procedures_etc/facial.jpg",
+    "./../../assets/image/extra_procedures_etc/hydrating-mani-pedi.jpg",
+    "./../../assets/image/extra_procedures_etc/massage.jpg",
+    "./../../assets/image/extra_procedures_etc/oxygen-facial.jpg",
+    "./../../assets/image/extra_procedures_etc/spa-massage.jpg",
+    "./../../assets/image/extra_procedures_etc/waxing2.jpg",
+
+]
+
+function displayImg(){
+  var num = Math.floor(Math.random() * (imgArr.length));
+  document.canvas.src="img/"+imgArr[num];
+}
+
+<input type="button" onClick="displayImg()" value="Display Random Image">
+<img src="img/dog4.jpg" name="canvas" style="width:200px"/>
+
+ */
+
   return (
 
     <>
 
       <section>
-
+    
         <div className="imageContainer">
 
           {treatment &&

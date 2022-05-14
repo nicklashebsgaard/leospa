@@ -56,8 +56,10 @@ const Quotes = () => {
 
     <>
 
-      <section>
-        <Carousel >
+      <section id="slider">
+
+        <Carousel autoplay="true" wrapAround="true" autoplayInterval="3500" >
+
           {recommendation &&
             recommendation.slice(0, 3).map(
               (item) =>
@@ -94,9 +96,10 @@ const Quotes = () => {
 
             )}
 
-        {fejl && <p>fejl</p>}
-
         </Carousel>
+
+        {fejl && <p id="hej">fejl</p>}
+
       </section>
 
     </>
