@@ -9,7 +9,6 @@ import Carousel from 'nuka-carousel';
 
 // IMAGES
 import QuoteImage from "./../../assets/image/quote.png";
-import PersonImage from "./../../assets/image/customers/client-1.png";
 
 // HELPERS API
 import { hentRecommendation } from "./../../helpers/apikald";
@@ -98,7 +97,7 @@ const Quotes = () => {
 
         </Carousel>
 
-        {fejl && <p id="hej">fejl</p>}
+        {fejl && <p>fejl</p>}
 
       </section>
 

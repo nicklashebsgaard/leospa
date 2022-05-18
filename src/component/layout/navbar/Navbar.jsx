@@ -6,6 +6,16 @@ import Logo from "./../../../assets/image/logo.png";
 
 export const Navbar = () => {
 
+  /* const [navbarOpen, setNavbarOpen] = useState(false); */
+/* 
+  const handleToggle = () => {
+    setNavbarOpen(prev => !prev)
+  } */
+
+ /*  const handleToggle = () => {
+    setNavbarOpen(!navbarOpen)
+  } */
+
   return (
     
     <div className="navbar">
@@ -19,6 +29,7 @@ export const Navbar = () => {
             <li className="Service">SERVICE</li>
             <li className="Contact">CONTACT</li>
         </ul>
+       {/*  <button onClick={handleToggle}>{navbarOpen ? "Close" : "Open"}</button> */}
       </nav>
 
     </div>

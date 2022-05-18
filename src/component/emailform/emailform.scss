@@ -33,6 +33,11 @@
 
             .Service{
                 grid-column: 1/2;
+                width: 100%;
+                background-color: rgb(249, 234, 236);
+                margin: 20px;
+                border: none;
+                box-shadow: #cecece77 0px 3px 0px 0px;
             }
 
             .Phone {
@@ -48,7 +53,14 @@
                 grid-column: 2/-1;
             }
         }
-            
+
+        #Service{
+            width: 100%;
+            height: 40px;
+            border: none;
+            background-color: rgb(249, 234, 236);
+        }
+        
         input{
             width: 100%;
             background-color: rgb(249, 234, 236);
@@ -66,10 +78,8 @@
                 border: none;
                 margin: 20px;
                 box-shadow: #cecece77 0px 3px 0px 0px;
-                textarea{
-                    resize: none;
-                    height: max-content;
-                }
+                resize: none;
+                height: max-content;
             }
         }
 
@@ -93,4 +103,20 @@
         } 
     }
     
+}
+
+@media only screen and (max-width: 1260px) {
+
+    .btnAppointment{
+        
+        button{
+        padding: 9px 16px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+
 }

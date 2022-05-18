@@ -87,3 +87,39 @@
     }
   }
 } // End Of WrapperContainer Scss
+
+@media (max-width: 1250px) {
+  .spaContainer{
+    img{
+      display: none;
+    }
+  }
+
+  .wrapperContainer .textContainer {
+    margin: 7% 10% 0% 0%;
+    grid-column: 3/-1;
+    grid-row: 2/3;
+    width: 80%;
+  }
+}
+
+/* Phone-size */
+
+@media (max-width: 680px) {
+
+  .wrapperContainer {
+    display: block;
+  }
+  .leafContainer {
+    display: none;
+  }
+
+  .textContainer {
+    text-align: center;
+    width: 95%;
+  }
+
+  .miniContainer {
+    justify-content: center;
+  }
+}

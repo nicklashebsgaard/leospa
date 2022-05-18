@@ -19,7 +19,7 @@ export const hentAbout = () =>{
 
     .then( res => {
         
-        console.log(res);
+        /* console.log(res); */
         {return res.data}
     })
     .catch( fejl => {
@@ -47,7 +47,7 @@ export const hentHero = () =>{
 
     .then( res => {
         
-        console.log(res);
+        /* console.log(res); */
         {return res.data}
     })
     .catch( fejl => {
@@ -74,7 +74,7 @@ export const hentRecommendation = () =>{
 
     .then( res => {
         
-        console.log(res);
+        /* console.log(res); */
         {return res.data}
     })
     .catch( fejl => {
@@ -101,7 +101,7 @@ export const hentTeam = () =>{
 
     .then( res => {
         
-        console.log(res);
+        /* console.log(res); */
         {return res.data}
     })
     .catch( fejl => {
@@ -128,7 +128,7 @@ export const hentTreatment = () =>{
 
     .then( res => {
         
-        console.log(res);
+        /* console.log(res); */
         {return res.data}
     })
     .catch( fejl => {

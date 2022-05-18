@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     max-width: 100%;
     gap: 5px;
-
+    
     .imageFlex{
         display: flex;
     }
@@ -32,5 +32,43 @@
     .Seven{
         grid-column: 4/5;
         
+    }
+}
+
+@media (max-width: 1200px) {
+    .imageContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 15px;
+        padding: 0% 2.5%;
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .Four{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .Five{
+            grid-column: 2/-1;
+            grid-row: 1/2;
+        }
+        .Six{
+            grid-column: 1/2;
+            grid-row: 2/-1;
+        }
+        .Seven{
+            grid-column: 2/-1;
+            grid-row: 2/-1;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .imageContainer {
+        display: flex;
+        flex-direction: column;
     }
 }

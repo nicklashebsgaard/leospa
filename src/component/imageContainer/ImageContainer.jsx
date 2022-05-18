@@ -7,6 +7,10 @@ import React, { useState, useEffect } from "react";
 // HELPERS API
 import { hentTreatment } from "./../../helpers/apikald";
 
+// Carousel - NPM https://www.npmjs.com/package/nuka-carousel
+import Carousel from 'nuka-carousel';
+
+
 const ImageContainer = () => {
 
   // STATE
@@ -30,7 +34,7 @@ const ImageContainer = () => {
         .then((data) => {
           if (data) {
             // Det er gået godt = data
-            console.log(data);
+            /* console.log(data); */
             setTreatment(data); // put data fra api'et i state
             setFejl(false); // nustill en evt. tidligere fejl
           } else {
@@ -46,36 +50,14 @@ const ImageContainer = () => {
 
   }, []); // END of useEffect
 
- /*  var imgArr = [
-
-    "./../../assets/image/extra_procedures_etc/CelluliteReduction.jpg", 
-    "./../../assets/image/extra_procedures_etc/facial.jpg",
-    "./../../assets/image/extra_procedures_etc/hydrating-mani-pedi.jpg",
-    "./../../assets/image/extra_procedures_etc/massage.jpg",
-    "./../../assets/image/extra_procedures_etc/oxygen-facial.jpg",
-    "./../../assets/image/extra_procedures_etc/spa-massage.jpg",
-    "./../../assets/image/extra_procedures_etc/waxing2.jpg",
-
-]
-
-function displayImg(){
-  var num = Math.floor(Math.random() * (imgArr.length));
-  document.canvas.src="img/"+imgArr[num];
-}
-
-<input type="button" onClick="displayImg()" value="Display Random Image">
-<img src="img/dog4.jpg" name="canvas" style="width:200px"/>
-
- */
-
   return (
 
     <>
 
       <section>
-    
+     {/* <Carousel autoplay="true" wrapAround="true" autoplayInterval="3500" > */}
         <div className="imageContainer">
-
+       
           {treatment &&
             treatment
               .slice(0, 4)
@@ -94,7 +76,7 @@ function displayImg(){
               )}
 
         </div>
-
+          {/* </Carousel> */}
       </section>
 
       {fejl && <p>fejl</p>}

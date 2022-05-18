@@ -4,8 +4,7 @@
 nav{
     
     .navWrapper {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+        display: grid; 
         text-align: center;
         padding-right: 50px;
         
@@ -43,5 +42,31 @@ nav{
             grid-column: 6/7;
             align-self: end;
         }
+    }
+}
+
+@media (max-width: 1250px) {
+    .wrapperContainer .navbar {
+        grid-column: 3/7;
+        grid-row: 1/2;
+    }
+}
+
+/* hamburger */
+@media (max-width: 920px) {
+  
+    li {
+        display: none;
+    }
+
+    .Logo{
+        text-align: left;
+    }
+}
+
+@media (max-width: 680px) {
+   
+    .Logo{
+        margin: 1% 1%; 
     }
 }

@@ -39,7 +39,7 @@ const Inspired = () => {
 
           if (data) {
             // Det er gået godt = data
-            console.log(data);
+            /* console.log(data); */
             setAbout(data); // put data fra api'et i state
             setFejl(false); // nustill en evt. tidligere fejl
           } else {

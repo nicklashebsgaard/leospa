@@ -64,3 +64,34 @@
 
 }
 
+@media (max-width: 680px){
+
+    .inspiredWrapper{
+        display: block;
+        padding: 0px 80px;
+    }
+    div .Jasmine img{
+        display: none;
+    }
+
+    div .Butterfly img{
+        display: none;
+    }
+
+    div .chinaRose img{
+        display: none;
+    }
+}
+
+@media (max-width: 540px){
+    .inspiredWrapper{
+        padding: 0 5%;
+    }
+
+    .btnReadMore{
+        button{
+            width: 50%;
+        }
+    }
+    
+}
