@@ -72,7 +72,7 @@ const Quotes = () => {
                       loading="lazy" />
                     </div>
 
-                    <div className="textContainer">
+                    <div className="textContainerQ">
                       <p>{item.content}</p>
                     </div>
 

@@ -64,7 +64,7 @@ const PopularProcedures = () => {
 
       <div className="wrapperPopular">
 
-        <div className="textContainer">
+        <div className="textContainerPop">
           <h2>Popular Procedures</h2>
           <p>
             To doesn't appear replenish together called he of mad place won't

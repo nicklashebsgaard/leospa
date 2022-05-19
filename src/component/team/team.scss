@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 2fr;
     
-    .textContainer{
+    .textContainerTeam{
         grid-column: 1/-1;
         grid-row: 1/2;
         text-align: center;
@@ -57,5 +57,42 @@
             }
         }
 
+    }
+}
+
+@media (max-width: 1200px) {
+    .teamWrapper{
+        display: block;
+    }
+    .teamWrapper .cardContainer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        text-align: center;
+        margin: 8% 5%;
+        column-gap: 0px;
+    }
+    .teamWrapper .textContainerTeam{
+        display: block;
+    }
+    .teamWrapper .teamPerson{
+        height: auto;
+    }
+}
+
+/* Phone size */
+
+@media (max-width: 680px) {
+    .teamWrapper{
+        display: block;
+    }
+    .teamWrapper .cardContainer {
+        display: block;
+        text-align: center;
+    }
+    .teamWrapper .textContainerTeam{
+        display: block;
+    }
+    .textContainerTeam {
+        margin: 0% 10%; 
     }
 }

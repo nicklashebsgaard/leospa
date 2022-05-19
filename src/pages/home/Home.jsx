@@ -10,6 +10,7 @@ import Spa from "./../../assets/image/spa.png";
 
 // PLAY ICON
 import PlayButton from "./../../assets/image/icons/play-icon-red.png";
+
 // COMPONENT
 import Navbar from "../../component/layout/navbar/Navbar";
 import Modal from "./../../component/modal/Modal";

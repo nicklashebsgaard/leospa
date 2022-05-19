@@ -142,3 +142,30 @@ export const hentTreatment = () =>{
     return response;
 
 };
+
+// Footer
+
+export const hentFooter = () =>{
+
+    // http://localhost:5029/footer/ 
+
+    let endpoint ="footer/";
+
+    let response = axios.get( api.baseUrl + endpoint )
+
+    .then( res => {
+        
+   /*      console.log(res); */
+        {return res.data}
+    })
+    .catch( fejl => {
+
+        console.log( "FEJL: ", fejl );
+
+        return null;
+
+    })
+
+    return response;
+
+};

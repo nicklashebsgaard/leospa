@@ -56,7 +56,7 @@ const Team = () => {
 
           <div className="teamWrapper">
 
-            <div className="textContainer">
+            <div className="textContainerTeam">
               <h2>Experienced Team</h2>
               <p>
                 To doesn't appear replenish together called he of mad place

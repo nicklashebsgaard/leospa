@@ -8,6 +8,9 @@ import TwitterLogo from "./../../../assets/image/icons/twitter-icon.png";
 import VimeoLogo from "./../../../assets/image/icons/vimeo-icon.png";
 import InstagramLogo from "./../../../assets/image/icons/instagram-icon.png";
 
+// COMPONENT
+import FooterContact from "../../footercontact/FooterContact";
+
 const Footer = () => {
 
   return (
@@ -56,9 +59,10 @@ const Footer = () => {
           </div>
             
         </div>
-
+        
       </div>
-
+      <hr />
+      <FooterContact />
     </footer>
 
   );
