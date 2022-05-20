@@ -48,6 +48,7 @@
       align-items: center;
       margin: 30px 0px 0px 0px;
     }
+
     .btnReserve {
       button {
         font-family: "Circular-Loom";
@@ -96,10 +97,10 @@
   }
 
   .wrapperContainer .textContainer {
-    margin: 7% 10% 0% 0%;
+    margin-top: 7%;
     grid-column: 3/-1;
     grid-row: 2/3;
-    width: 80%;
+    padding-right: 20%;
   }
 }
 
@@ -108,17 +109,29 @@
 @media (max-width: 680px) {
   .wrapperContainer {
     display: block;
+    padding: 0 5%;
   }
   .leafContainer {
     display: none;
   }
-
-  .textContainer {
+  .test{
+    height: auto;
+  }
+  .wrapperContainer .textContainer {
+    padding: 0;
     text-align: center;
-    width: 95%;
   }
 
   .miniContainer {
     justify-content: center;
+  }
+
+  .btnReserve {
+    width: 50%;
+  }
+
+  .wrapperContainer .textContainer .btnReserve button{
+    width: 80%;
+    border-radius: 5px;
   }
 }

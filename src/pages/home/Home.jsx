@@ -90,6 +90,7 @@ const Home = () => {
                     </div>
 
                     <div className="textContainer">
+                      <div className="test">
                       <span>
                         <p>{item.title1}</p>
                       </span>
@@ -120,12 +121,11 @@ const Home = () => {
                             </iframe>
                           </Modal>
                         </div>
-                       
-                        
+                           
                         <p>Watch our story </p>
 
                       </div>
-
+                      </div>
                     </div>
 
                     <div className="spaContainer">
@@ -154,8 +154,7 @@ const Home = () => {
         {fejl && 
         <p>fejl</p>
         }
-
-       
+      
       </header>
 
     </>
