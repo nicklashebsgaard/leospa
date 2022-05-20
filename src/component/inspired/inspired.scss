@@ -1,97 +1,92 @@
-.inspiredWrapper{
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 0.7fr 3fr 1fr 2fr 2fr;
-    grid-template-rows: 1fr 1fr 3fr;
+.inspiredWrapper {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 0.7fr 3fr 1fr 2fr 2fr;
+  grid-template-rows: 1fr 1fr 3fr;
 
-    .chinaRose{
-        grid-column: 2/4;
-        grid-row: 1/3;
-        justify-self: end;
-        align-self: center;
-    }
+  .chinaRose {
+    grid-column: 2/4;
+    grid-row: 1/3;
+    justify-self: end;
+    align-self: center;
+  }
 
-    .Butterfly{
-        grid-column: 4/5;
-        grid-row: 1/3;
-        justify-self: end;
-        align-self: center;
-        padding-top: 40px;
-    }
+  .Butterfly {
+    grid-column: 4/5;
+    grid-row: 1/3;
+    justify-self: end;
+    align-self: center;
+    padding-top: 40px;
+  }
 
-    .Jasmine {
-        grid-column: 6/-1;
-        grid-row: 3/-1;
-        justify-self: self-end;
-        margin: 55px 55px 0px 0px;
-    }
+  .Jasmine {
+    grid-column: 6/-1;
+    grid-row: 3/-1;
+    justify-self: self-end;
+    margin: 55px 55px 0px 0px;
+  }
 
-    .gridContainer{
-        grid-column: 3/7;
-        grid-row: 3/-1;
+  .gridContainer {
+    grid-column: 3/7;
+    grid-row: 3/-1;
 
-        .textContainerTwo{
-            text-align: center;
-            grid-column: 3/7;
-            grid-row: 5/-1;
-            p {
-                font-family: 'Circular-Loom';
-                color: rgb(180, 176, 176);
-                line-height: 1.5em;
-            }
+    .textContainerTwo {
+      text-align: center;
+      grid-column: 3/7;
+      grid-row: 5/-1;
+      p {
+        font-family: "Circular-Loom";
+        color: rgb(180, 176, 176);
+        line-height: 1.5em;
+      }
 
-            h2{
-                margin: 30px;
-                font-size: 3em;
-            }
+      h2 {
+        margin: 30px;
+        font-size: 3em;
+      }
 
-            .btnReadMore{
-                button{
-                    font-family: 'Circular-Loom';
-                    margin: 50px;
-                    padding: 10px 18px;
-                    min-height: min-content;
-                    border-radius: 25px;
-                    border: none;
-                    font-weight: bold;
-                    color: white;
-                    background-color: rgb(255,129,126);
-                }
-            }
-        
+      .btnReadMore {
+        button {
+          font-family: "Circular-Loom";
+          margin: 50px;
+          padding: 10px 18px;
+          min-height: min-content;
+          border-radius: 25px;
+          border: none;
+          font-weight: bold;
+          color: white;
+          background-color: rgb(255, 129, 126);
         }
-   
-    } 
-
+      }
+    }
+  }
 }
 
-@media (max-width: 680px){
+@media (max-width: 680px) {
+  .inspiredWrapper {
+    display: block;
+    padding: 0px 80px;
+  }
+  div .Jasmine img {
+    display: none;
+  }
 
-    .inspiredWrapper{
-        display: block;
-        padding: 0px 80px;
-    }
-    div .Jasmine img{
-        display: none;
-    }
+  div .Butterfly img {
+    display: none;
+  }
 
-    div .Butterfly img{
-        display: none;
-    }
-
-    div .chinaRose img{
-        display: none;
-    }
+  div .chinaRose img {
+    display: none;
+  }
 }
 
-@media (max-width: 540px){
-    .inspiredWrapper{
-        padding: 0 5%;
-    }
+@media (max-width: 540px) {
+  .inspiredWrapper {
+    padding: 0 5%;
+  }
 
-    .btnReadMore{
-        button{
-            width: 50%;
-        }
+  .btnReadMore {
+    button {
+      width: 50%;
     }
-    
+  }
 }

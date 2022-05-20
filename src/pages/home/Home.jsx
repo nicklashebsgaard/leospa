@@ -1,8 +1,8 @@
 // SCSS
 import "./home.scss";
 
-// REACT useSTATE useEFFECT
-import React, { useState, useEffect } from "react";
+// useSTATE useEFFECT
+import { useState, useEffect } from "react";
 
 // IMAGES
 import Leaf from "./../../assets/image/leaf.png";

@@ -81,11 +81,11 @@
     display: block;
   }
 
-  .wrapperPopular .cardContainer{
+  .wrapperPopular .cardContainer {
     display: block;
   }
 
-  .popularCard{
+  .popularCard {
     width: 100%;
   }
 }
@@ -93,13 +93,13 @@
 /* Phone size */
 
 @media (max-width: 680px) {
-  .wrapperPopular{
+  .wrapperPopular {
     flex-direction: column;
   }
-  .wrapperPopular .cardContainer{
+  .wrapperPopular .cardContainer {
     display: block;
   }
-  .textContainerPop{
+  .textContainerPop {
     margin: 0% 10%;
   }
   .popularCard {

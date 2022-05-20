@@ -1,80 +1,77 @@
-footer{
-    margin-top: 40px;
+footer {
+  margin-top: 40px;
 }
 
 .footerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(249, 234, 236);
+  font-family: "Circular-Loom";
+  .leospaIconContainer {
+    margin: 80px 0px 40px 0px;
+    text-align: center;
+    img {
+      cursor: pointer;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .navigationFooter {
+    text-align: center;
+    nav {
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+        li {
+          cursor: pointer;
+          margin: 0px 20px;
+        }
+        .homeFooter {
+          grid-column: 1/2;
+        }
+
+        .aboutFooter {
+          grid-column: 2/3;
+        }
+
+        .featureFooter {
+          grid-column: 3/4;
+        }
+
+        .serviceFooter {
+          grid-column: 4/5;
+        }
+
+        .contactFooter {
+          grid-column: 5/-1;
+        }
+      }
+    }
+  }
+
+  .socialIconContainer {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: rgb(249, 234, 236);
-    font-family: 'Circular-Loom';
-    .leospaIconContainer{
-        margin: 80px 0px 40px 0px;
-        text-align: center;
-        img{
-            cursor: pointer;
-            max-width: 100%;
-            height: auto;
-        }
+    max-width: 100%;
+    margin: 50px 0px;
+    img {
+      cursor: pointer;
+      height: 20px;
+      padding: 0px 20px;
     }
+  }
 
-    .navigationFooter{
-        text-align: center;
-        nav {
-
-            ul{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
-                li{
-                    cursor: pointer;
-                    margin: 0px 20px;
-                }
-                .homeFooter{
-                    grid-column: 1/2;
-                }
-
-                .aboutFooter{
-                    grid-column: 2/3;
-                }
-
-                .featureFooter{
-                    grid-column: 3/4;
-                }
-
-                .serviceFooter{
-                    grid-column: 4/5;
-                }
-
-                .contactFooter{
-                    grid-column: 5/-1;
-                }
-            }
-
-        }
+  .copyRights {
+    margin: 40px 0px 80px 0px;
+    text-align: center;
+    p {
+      color: rgb(180, 176, 176);
+      span {
+        color: rgb(255, 129, 126);
+      }
     }
-
-    .socialIconContainer{
-        display: flex;
-        justify-content: center;
-        max-width: 100%;
-        margin: 50px 0px; 
-        img{
-            cursor: pointer;
-            height: 20px;
-            padding: 0px 20px;
-        }
-    }
-
-    .copyRights{
-        margin: 40px 0px 80px 0px;
-        text-align: center;
-        p {
-            color: rgb(180, 176, 176);
-            span{
-                color: rgb(255,129,126);
-            }
-        }
-    }
-
+  }
 }

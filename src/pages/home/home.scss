@@ -1,6 +1,6 @@
 @import "./../../global.scss";
-#popularSection{
-    margin-bottom: 50px;
+#popularSection {
+  margin-bottom: 50px;
 }
 .wrapperContainer {
   display: grid;
@@ -89,8 +89,8 @@
 } // End Of WrapperContainer Scss
 
 @media (max-width: 1250px) {
-  .spaContainer{
-    img{
+  .spaContainer {
+    img {
       display: none;
     }
   }
@@ -106,7 +106,6 @@
 /* Phone-size */
 
 @media (max-width: 680px) {
-
   .wrapperContainer {
     display: block;
   }

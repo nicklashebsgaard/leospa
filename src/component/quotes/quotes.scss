@@ -1,55 +1,53 @@
-.quotesWrapper{
-    
-    .imgQuotes{
-        text-align: center;
-        padding: 30px 0px;
-    }
+.quotesWrapper {
+  .imgQuotes {
+    text-align: center;
+    padding: 30px 0px;
+  }
 
-    .textContainerQ{
-        text-align: -webkit-center;
-        p{
-            font-family: 'Circular-Loom';
-            color: rgb(180, 176, 176);
-            line-height: 1.5em;
-            max-width: 50%;
-        }
+  .textContainerQ {
+    text-align: -webkit-center;
+    p {
+      font-family: "Circular-Loom";
+      color: rgb(180, 176, 176);
+      line-height: 1.5em;
+      max-width: 50%;
     }
+  }
 
-    .imageOfPerson{
-        text-align: center;
-        margin: 30px 0px;
-        img{
-            border-radius: 50%;
-        }
+  .imageOfPerson {
+    text-align: center;
+    margin: 30px 0px;
+    img {
+      border-radius: 50%;
     }
+  }
 
-    .personName{
-        text-align: -webkit-center;
-        p{
-            padding-bottom: 30px;
-        }
+  .personName {
+    text-align: -webkit-center;
+    p {
+      padding-bottom: 30px;
     }
-
+  }
 }
 
- /* Carousel */
-#slider{
-    background-color: rgb(249, 234, 236);
+/* Carousel */
+#slider {
+  background-color: rgb(249, 234, 236);
 }
 
-.slider-control-centerleft{
-    display: none;
+.slider-control-centerleft {
+  display: none;
 }
 
-.slider-control-centerright{
-    margin: 20px;
-    display: none;
+.slider-control-centerright {
+  margin: 20px;
+  display: none;
 }
 
 /* Phone size */
 
 @media (max-width: 680px) {
-    .quotesWrapper .textContainerQ p{
-        max-width: 90%;
-    }
+  .quotesWrapper .textContainerQ p {
+    max-width: 90%;
+  }
 }

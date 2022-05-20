@@ -1,76 +1,66 @@
-.infoContainer{
-    background-color: rgb(249, 234, 236);
-    font-family: 'Circular-Loom';
-    line-height: 1.5;
-    display: flex;
-    padding: 3% 8%;
+.infoContainer {
+  background-color: rgb(249, 234, 236);
+  font-family: "Circular-Loom";
+  line-height: 1.5;
+  display: flex;
+  padding: 3% 8%;
 
-    h5{
-        font-weight: bold;
+  h5 {
+    font-weight: bold;
+  }
+
+  .footerZip {
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    width: 50%;
+    gap: 5%;
+  }
+
+  .footerKontakt {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    width: 50%;
+    gap: 5%;
+    .gridBox2 {
+      justify-self: end;
+      text-align: end;
     }
 
-    .footerZip{
-        display: grid;
-        grid-template-columns: 0fr 1fr;
-        width: 50%;
-        gap: 5%;
-        .redRose{
-            
-        }
-
-        .gridBox{
-
-        }
+    .jasmineFlower {
+      justify-self: end;
     }
-
-    .footerKontakt{
-        display: grid;
-        grid-template-columns: 5fr 1fr;
-        width: 50%;
-        gap: 5%;
-        .gridBox2{
-            justify-self: end;
-            text-align: end;
-        }
-
-        .jasmineFlower{
-            justify-self: end;
-        }
-    }
+  }
 }
 
 @media (max-width: 680px) {
+  .infoContainer {
+    flex-direction: column;
+  }
 
-    .infoContainer {
-        flex-direction: column;
+  .infoContainer {
+    img {
+      display: none;
     }
+  }
 
-    .infoContainer {
+  .gridBox {
+    padding: 6% 0%;
+  }
 
-        img{
-            display: none;
-        }
+  .infoContainer .footerZip {
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    max-width: 100%;
+    gap: 0;
+  }
 
-    }
-    
-    .gridBox {
-        padding: 6% 0%;
-    }
-    
-    .infoContainer .footerZip {
-        display: grid;
-        grid-template-columns: 0fr 1fr;
-        max-width: 100%;
-        gap: 0;
-    }
+  .infoContainer .footerKontakt {
+    grid: none;
+    width: 100%;
+  }
 
-    .infoContainer .footerKontakt {
-        grid: none;
-        width: 100%;
-    }
-
-    .infoContainer .footerKontakt .gridBox2 {
-        justify-self: start;
-        text-align: start;
-    }
+  .infoContainer .footerKontakt .gridBox2 {
+    justify-self: start;
+    text-align: start;
+  }
 }

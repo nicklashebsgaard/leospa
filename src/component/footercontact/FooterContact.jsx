@@ -7,6 +7,7 @@ import React, { useState, useEffect } from "react";
 // Images 
 import ChinaRose from "./../../assets/image/china-rose.png";
 import Jasmine from "./../../assets/image/jasmine.png";
+
 // HELPERS API 
 import { hentFooter } from "../../helpers/apikald";
 
