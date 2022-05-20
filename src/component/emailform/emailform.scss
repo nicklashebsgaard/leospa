@@ -136,14 +136,17 @@
   }
   .formWrapper .formContainer {
     display: flex;
-    grid-column: 1/6;
-    grid-row: 1/2;
+    justify-self: center; 
     align-self: center;
     margin: 1% 2.5%;
   }
 
   .formWrapper .formContainer form {
+    width: 80vw;
     text-align: center;
   }
   
+  .btnAppointment button{
+      margin-bottom: 25px;
+  }
 }
