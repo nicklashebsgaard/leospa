@@ -45,6 +45,12 @@ nav{
     }
 }
 
+@media (min-width: 1250px) {
+    .burgerMenuContainer {
+        display: none;
+    }
+}
+
 @media (max-width: 1250px) {
     .wrapperContainer .navbar {
         grid-column: 3/7;
@@ -52,8 +58,22 @@ nav{
     }
 }
 
+/* Phone size */
+
+@media (min-width: 921px) {
+    .burgerMenuContainer {
+        display: none;
+    }
+}
+
 /* hamburger */
+
 @media (max-width: 920px) {
+    nav .navWrapper {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
   
     li {
         display: none;
@@ -65,8 +85,21 @@ nav{
 }
 
 @media (max-width: 680px) {
-   
+    nav .navWrapper {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav .navWrapper ul {
+        height: auto;
+    }
+
     .Logo{
-        margin: 1% 1%; 
+        padding: 10px 20px; 
+    }
+
+    .burgerMenuContainer {
+        padding: 10px 20px;
     }
 }

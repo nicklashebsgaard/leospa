@@ -28,13 +28,14 @@ export const Navbar = () => {
             <li className="Feature">FEATURE</li>
             <li className="Service">SERVICE</li>
             <li className="Contact">CONTACT</li>
+
             <div className="burgerMenuContainer">
-              
-            </div>
-            <span id="hamBurger" onClick={() => {setOpenBurgerMenu(true);} } className="material-symbols-outlined">
+              <span id="hamBurger" onClick={() => {setOpenBurgerMenu(true);} } className="material-symbols-outlined">
               menu
             </span>
             {openBurgerMenu && <BurgerModal closeBurgerMenu={setOpenBurgerMenu} />}
+            </div>
+            
         </ul>
       </nav>
 
