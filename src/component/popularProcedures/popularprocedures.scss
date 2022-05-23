@@ -71,6 +71,9 @@
         font-weight: bold;
         color: white;
         background-color: black;
+        &:hover{
+          background-color: blue;
+        }
       }
     }
   }

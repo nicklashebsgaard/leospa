@@ -57,6 +57,9 @@
         color: white;
         font-weight: bold;
         background-color: rgb(255, 129, 126);
+        &:hover{
+          background-color: blue;
+        }
       }
     }
 
@@ -71,6 +74,9 @@
         justify-content: center;
         height: 30px;
         width: 30px;
+        &:hover{
+          background-color: blue;
+        }
         img {
           height: 20px;
           width: 20px;

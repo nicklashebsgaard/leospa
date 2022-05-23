@@ -55,6 +55,9 @@
           font-weight: bold;
           color: white;
           background-color: rgb(255, 129, 126);
+          &:hover{
+            background-color: blue;
+          }
         }
       }
     }
