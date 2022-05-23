@@ -8,8 +8,6 @@ const Modal = ({ children }) => {
     target.classList.toggle("active");
   };
 
-  
-
   return (
 
     <div id="modal">

@@ -68,7 +68,7 @@ const Home = () => {
 
     <>
 
-      <header>
+      <header id="home">
         
         {hero && (
 
