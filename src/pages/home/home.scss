@@ -89,7 +89,10 @@
   }
 } // End Of WrapperContainer Scss
 
+/* MEDIA  1250 px */
+
 @media (max-width: 1250px) {
+  
   .spaContainer {
     img {
       display: none;
@@ -104,19 +107,23 @@
   }
 }
 
-/* Phone-size */
+/* Phone-size 680px */
 
 @media (max-width: 680px) {
+
   .wrapperContainer {
     display: block;
     padding: 0 5%;
   }
+
   .leafContainer {
     display: none;
   }
+
   .test{
     height: auto;
   }
+
   .wrapperContainer .textContainer {
     padding: 0;
     text-align: center;

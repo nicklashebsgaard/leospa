@@ -45,6 +45,8 @@ nav{
     }
 }
 
+/* MEDIA  1250 px */
+
 @media (min-width: 1250px) {
     .burgerMenuContainer {
         display: none;
@@ -58,7 +60,7 @@ nav{
     }
 }
 
-/* Phone size */
+/* Phone size 920 px */
 
 @media (min-width: 921px) {
     .burgerMenuContainer {
@@ -70,9 +72,13 @@ nav{
 
 @media (max-width: 920px) {
     nav .navWrapper {
-        padding: 0;
+        padding: 10px 20px;
         display: flex;
         justify-content: space-between;
+    }
+
+    .wrapperContainer .navbar {
+        grid-column: 1/8;
     }
   
     li {
@@ -84,7 +90,12 @@ nav{
     }
 }
 
+/* MEDIA 680 px */
+
 @media (max-width: 680px) {
+    .wrapperContainer{
+        padding: 0%;
+    }
     nav .navWrapper {
         padding: 0;
         display: flex;
@@ -101,5 +112,9 @@ nav{
 
     .burgerMenuContainer {
         padding: 10px 20px;
+    }
+
+    .wrapperContainer .textContainer {
+        padding: 0% 5%;
     }
 }
