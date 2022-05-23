@@ -23,6 +23,7 @@ export const Navbar = () => {
       <nav>
         <ul className="navWrapper">
             <div className="Logo"><img src={Logo} alt="Leospa Logo" /></div>
+            
             <li className="Home">HOME</li>
             <li className="About">ABOUT</li>
             <li className="Feature">FEATURE</li>

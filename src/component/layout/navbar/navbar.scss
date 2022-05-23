@@ -81,7 +81,23 @@ nav{
         grid-column: 1/8;
     }
   
-    li {
+    nav .navWrapper .Home {
+        display: none;
+    }
+
+    nav .navWrapper .About {
+        display: none;
+    }
+
+    nav .navWrapper .Feature {
+        display: none;
+    }
+
+    nav .navWrapper .Service {
+        display: none;
+    }
+    
+    nav .navWrapper .Contact {
         display: none;
     }
 

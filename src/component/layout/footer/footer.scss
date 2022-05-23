@@ -75,3 +75,11 @@ footer {
     }
   }
 }
+
+/* Phone size */
+
+@media (max-width: 680px) {
+  .footerWrapper .navigationFooter nav ul li {
+    margin: 0;
+  }
+}
