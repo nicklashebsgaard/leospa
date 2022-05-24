@@ -12,7 +12,7 @@ const SomeTest = () => {
       }
 
   return (
-
+    
     <div className="someTest"> 
 
     <button onClick={ handleToggleModal }>
@@ -24,7 +24,9 @@ const SomeTest = () => {
         <Modal>
             
         </Modal>
+       
     </div>
+    
 
   );
 

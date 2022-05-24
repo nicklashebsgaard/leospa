@@ -56,7 +56,10 @@
           color: white;
           background-color: rgb(255, 129, 126);
           &:hover{
-            background-color: blue;
+            transform: scale(1.06);
+            color: rgb(73, 71, 42);
+            background: linear-gradient(-45deg, rgb(255, 129, 126), #9198e5);
+            text-shadow: -1px -1px 0 rgba(255,255,255,.5),   
           }
         }
       }

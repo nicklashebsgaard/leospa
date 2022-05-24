@@ -21,7 +21,7 @@ const App = () => {
     <div className="App">
 
       <Layout>
-        
+      
         <Home />
         <Inspired />
         <ImageContainer />
