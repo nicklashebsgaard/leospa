@@ -36,3 +36,18 @@
   font-size: 3rem;
   color: rgb(26, 24, 24);
 }
+
+
+$Tablet: 1250px;
+@mixin tablet {
+  @media (max-width: #{$Tablet}){
+    @content 
+  }
+}
+
+$Moblie: 680px;
+@mixin mobile {
+  @media (max-width: #{$Moblie}){
+      @content 
+  }
+}

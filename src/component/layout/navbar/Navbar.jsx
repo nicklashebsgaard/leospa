@@ -4,6 +4,9 @@ import "./navbar.scss";
 // IMAGE/ICON
 import Logo from "./../../../assets/image/logo.png";
 
+// NavLink
+import { NavLink } from 'react-router-dom';
+
 // useState
 import { useState } from "react";
 
@@ -21,12 +24,25 @@ export const Navbar = () => {
       <nav>
         <ul className="navWrapper">
 
-            <div className="Logo"><img src={Logo} alt="Leospa Logo" /></div>
-            <li className="Home">HOME</li>
-            <li className="About">ABOUT</li>
-            <li className="Feature">FEATURE</li>
-            <li className="Service">SERVICE</li>
-            <li className="Contact">CONTACT</li>
+            <div className="Logo">
+              <NavLink to="/"><img src={Logo} alt="Leospa Logo" /></NavLink>  
+            </div>
+            
+            <li className="Home">
+              <NavLink to="/">HOME</NavLink>
+            </li>
+            <li className="About">
+              <NavLink to="/#about">ABOUT</NavLink>  
+            </li>
+            <li className="Feature">
+              <NavLink to="/#features">FEATURE</NavLink>  
+            </li>
+            <li className="Service">
+              <NavLink to="/#treatment">SERVICE</NavLink>  
+            </li>
+            <li className="Contact">
+              <NavLink to="/#contact">CONTACT</NavLink> 
+            </li>
 
             <div className="burgerMenuContainer">
               <span id="hamBurger" onClick={() => {setOpenBurgerMenu(true);} } className="material-symbols-outlined">

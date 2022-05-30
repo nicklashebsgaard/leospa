@@ -1,3 +1,5 @@
+@import "./../../../global.scss";
+
 .navbar{
     z-index: 30;
 }
@@ -43,9 +45,19 @@ nav{
             align-self: end;
         }
     }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
 }
 
 /* MEDIA  1250 px */
+/* @include tablet {
+    .burgerMenuContainer {
+        display: none;
+    }
+} */
 
 @media (min-width: 1250px) {
     .burgerMenuContainer {
@@ -125,10 +137,6 @@ nav{
 
     .Logo{
         padding: 10px 20px; 
-    }
-
-    .burgerMenuContainer {
-       
     }
 
     .wrapperContainer .textContainer {

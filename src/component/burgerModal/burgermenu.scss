@@ -12,6 +12,10 @@
   height: fit-content;
 }
 
+.showNone {
+  display: none;
+}
+
 .burgerMenuContainer {
   width: fit-content;
   height: fit-content;
@@ -33,7 +37,7 @@
   width: 280px;
   height: 100vh;
   display: grid;
-  background-color: rgb(173, 192, 192);
+  background-color: rgba(173, 192, 192, 0.96);
 
   span {
     justify-self: end;
