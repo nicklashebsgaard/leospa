@@ -11,9 +11,9 @@ import Home from './pages/home/Home';
 import Inspired from './component/inspired/Inspired';
 import ImageContainer from "./component/imageContainer/ImageContainer";
 import PopularProcedures from './component/popularProcedures/PopularProcedures';
-import Quotes from './component/quotes/Quotes';
 import Team from "./component/team/Team";
 import EmailForm from './component/emailform/EmailForm';
+import Slideshow from './component/slider/Slideshow';
 
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
     <div className="App">
 
       <Layout>
-
+        
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
@@ -31,7 +31,7 @@ const App = () => {
         <Inspired />
         <ImageContainer />
         <PopularProcedures />
-        <Quotes />
+        <Slideshow />
         <Team />
         <EmailForm />
 

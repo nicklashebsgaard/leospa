@@ -18,11 +18,11 @@ const BurgerModal = ({closeBurgerMenu}) => {
             close
         </span>
         <ul>
-          <li><a class="list-item" href="#">HOME</a></li>
-          <li><a class="list-item" href="#">ABOUT</a></li>
-          <li><a class="list-item" href="#">FEATURE</a></li>
-          <li><a class="list-item" href="#">SERVICE</a></li>
-          <li><a class="list-item" href="#">CONTACT</a></li>
+          <li><a className="list-item" href="#">HOME</a></li>
+          <li><a className="list-item" href="#">ABOUT</a></li>
+          <li><a className="list-item" href="#">FEATURE</a></li>
+          <li><a className="list-item" href="#">SERVICE</a></li>
+          <li><a className="list-item" href="#">CONTACT</a></li>
         </ul>
     </div>
 

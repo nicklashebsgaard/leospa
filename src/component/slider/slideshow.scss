@@ -4,6 +4,7 @@
   margin: 0 auto;
   overflow: hidden;
   max-width: 100%;
+  background-color: rgb(249, 234, 236);
 }
 
 .slideshowSlider {
@@ -13,30 +14,72 @@
 
 .slide {
   display: inline-block;
-
-  height: 400px;
+  height: 350px;
   width: 100%;
-  border-radius: 40px;
+
+  .imgQuotes {
+    text-align: center;
+    padding: 30px 0px;
+  }
+
+  .textContainerQ {
+    text-align: -webkit-center;
+    white-space: break-spaces;
+    p {
+      font-family: "Circular-Loom";
+      color: rgb(180, 176, 176);
+      line-height: 1.5em;
+      max-width: 70%;
+    }
+  }
+
+  .imageOfPerson {
+    text-align: center;
+    margin: 30px 0px;
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .personName {
+    text-align: -webkit-center;
+    p {
+      padding-bottom: 30px;
+    }
+  }
 }
 
 /* Buttons */
 
 .slideshowDots {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .slideshowDot {
   display: inline-block;
-  height: 20px;
-  width: 20px;
+  height: 8px;
+  width: 8px;
   border-radius: 50%;
-
   cursor: pointer;
   margin: 15px 7px 0px;
-
   background-color: #c4c4c4;
 }
 
 .slideshowDot.active {
-  background-color: #6a0dad;
+  background-color: #141016;
+}
+
+/* Phone size */
+
+@media (max-width: 680px) {
+
+  .slide .textContainerQ p {
+    max-width: 90%;
+  }
+  
+  .slideshowDots {
+    margin-top: 20px;
+  }
+
 }

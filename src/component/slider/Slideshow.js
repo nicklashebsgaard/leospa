@@ -7,8 +7,11 @@ import React, { useState, useEffect } from "react";
 // HELPERS API
 import { hentRecommendation } from "./../../helpers/apikald";
 
-const colors = ["#0088FE", "#00C49F", "#FFBB28"];
-const delay = 3000;
+// IMAGES
+import QuoteImage from "./../../assets/image/quote.png";
+
+const dotsArry = ["", "", ""];
+const delay = 5000;
 
 const Slideshow = () => {
 
@@ -63,7 +66,7 @@ const Slideshow = () => {
     timeoutRef.current = setTimeout(
       () =>
         setIndex((prevIndex) =>
-          prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+          prevIndex === dotsArry.length - 1 ? 0 : prevIndex + 1
         ),
       delay
     );
@@ -78,29 +81,54 @@ const Slideshow = () => {
     <>
 
     <section id="slider">
-    
-      <div className="slideshow">
 
-        <div
-          className="slideshowSlider"
-          style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
-        >
-          {colors.map((backgroundColor, index) => (
-            <div
-              className="slide"
-              key={index}
-              style={{ backgroundColor }}
-            ></div>
-          ))}
+      <div className="slideshow" >
+
+        <div className="slideshowSlider" 
+          style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
+
+        {recommendation &&
+            recommendation.slice(0, 3).map(
+              (item) =>
+                item && (
+            <div className="slide" key={item._id}>
+              
+              <div className="imgQuotes">
+                <img src={QuoteImage} 
+                    alt="Quotes"
+                    loading="lazy" />
+                </div>
+
+                <div className="textContainerQ">
+                  <p>{item.content}</p>
+                </div>
+
+                <div className="imageOfPerson">
+                  <img 
+                    src={ require( "./../../assets/image/customers/" + item.image)} 
+                    alt="Girl" 
+                    loading="lazy" />
+                </div>
+
+                <div className="personName">
+                  <p>
+                    <span>{item.name},</span> {item.title}
+                  </p>
+                </div>
+              
+            </div>
+            )
+        )}
         </div>
+         
 
         <div className="slideshowDots">
-          {colors.map((_, idx) => (
+          {dotsArry.map((_, idx) => (
             <div
               key={idx}
               className={`slideshowDot${index === idx ? " active" : ""}`}
               onClick={() => {
-                setIndex(idx);
+              setIndex(idx);
               }}
             ></div>
           ))}
