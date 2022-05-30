@@ -12,8 +12,6 @@ import Quotes from './component/quotes/Quotes';
 import Team from "./component/team/Team";
 import EmailForm from './component/emailform/EmailForm';
 
-
-
 const App = () => {
 
   return (
@@ -21,7 +19,7 @@ const App = () => {
     <div className="App">
 
       <Layout>
-      
+        
         <Home />
         <Inspired />
         <ImageContainer />

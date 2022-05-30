@@ -114,8 +114,9 @@ nav{
     }
     nav .navWrapper {
         padding: 0;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+       
     }
 
     nav .navWrapper ul {
@@ -127,7 +128,7 @@ nav{
     }
 
     .burgerMenuContainer {
-        padding: 10px 20px;
+       
     }
 
     .wrapperContainer .textContainer {

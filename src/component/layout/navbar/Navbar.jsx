@@ -14,16 +14,14 @@ export const Navbar = () => {
 
   const [openBurgerMenu, setOpenBurgerMenu] = useState(false);
 
-
-
   return (
     
     <div className="navbar">
 
       <nav>
         <ul className="navWrapper">
+
             <div className="Logo"><img src={Logo} alt="Leospa Logo" /></div>
-            
             <li className="Home">HOME</li>
             <li className="About">ABOUT</li>
             <li className="Feature">FEATURE</li>
@@ -34,8 +32,9 @@ export const Navbar = () => {
               <span id="hamBurger" onClick={() => {setOpenBurgerMenu(true);} } className="material-symbols-outlined">
               menu
             </span>
-            {openBurgerMenu && <BurgerModal closeBurgerMenu={setOpenBurgerMenu} />}
             </div>
+            <></>
+            {openBurgerMenu && <BurgerModal closeBurgerMenu={setOpenBurgerMenu} />}
             
         </ul>
       </nav>
