@@ -76,7 +76,7 @@ const PopularProcedures = () => {
         <div className="cardContainer">
 
           <>
-          
+
             {treatment &&
               treatment.slice(0, antal).map(
                 (item) =>
@@ -115,6 +115,14 @@ const PopularProcedures = () => {
         </div>
 
       </div>
+
+      {loading && 
+        <div> Loading ...
+          <span className="material-symbols-outlined" >
+          autorenew
+          </span>
+        </div>
+        }
 
       {fejl && <p>fejl</p>}
       

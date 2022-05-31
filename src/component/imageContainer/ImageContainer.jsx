@@ -60,7 +60,7 @@ const ImageContainer = () => {
        
           {treatment &&
             treatment
-              .slice(0, 4)
+              .slice(0,4)
               .map(
                 (item) =>
                   item && (
@@ -78,6 +78,14 @@ const ImageContainer = () => {
         </div>
           {/* </Carousel> */}
       </section>
+
+      {loading && 
+        <div> Loading ...
+          <span className="material-symbols-outlined" >
+          autorenew
+          </span>
+        </div>
+        }
 
       {fejl && <p>fejl</p>}
 
