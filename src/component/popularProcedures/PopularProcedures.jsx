@@ -74,7 +74,9 @@ const PopularProcedures = () => {
         </div>
 
         <div className="cardContainer">
+
           <>
+          
             {treatment &&
               treatment.slice(0, antal).map(
                 (item) =>

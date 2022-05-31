@@ -5,13 +5,13 @@ import "./slideshow.scss";
 import React, { useState, useEffect } from "react";
 
 // HELPERS API
-import { hentRecommendation } from "./../../helpers/apikald";
+import { hentRecommendation } from "../../helpers/apikald";
 
 // IMAGES
 import QuoteImage from "./../../assets/image/quote.png";
 
 const dotsArry = ["", "", ""];
-const delay = 5000;
+const delay = 4500;
 
 const Slideshow = () => {
 
@@ -91,6 +91,7 @@ const Slideshow = () => {
             recommendation.slice(0, 3).map(
               (item) =>
                 item && (
+
             <div className="slide" key={item._id}>
               
               <div className="imgQuotes">
@@ -117,8 +118,10 @@ const Slideshow = () => {
                 </div>
               
             </div>
+
             )
         )}
+
         </div>
          
 
@@ -135,7 +138,9 @@ const Slideshow = () => {
         </div>
 
       </div>
-      
+              
+      {fejl && <p>fejl</p>}
+        
     </section>
 
     </>

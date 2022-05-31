@@ -13,7 +13,7 @@ import ImageContainer from "./component/imageContainer/ImageContainer";
 import PopularProcedures from './component/popularProcedures/PopularProcedures';
 import Team from "./component/team/Team";
 import EmailForm from './component/emailform/EmailForm';
-import Slideshow from './component/slider/Slideshow';
+import Slideshow from './component/recommendation/Slideshow';
 
 
 const App = () => {

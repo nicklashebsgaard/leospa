@@ -151,9 +151,7 @@ const Home = () => {
         </div>
         }
 
-        {fejl && 
-        <p>fejl</p>
-        }
+      {fejl && <p>fejl</p>}
       
       </header>
 

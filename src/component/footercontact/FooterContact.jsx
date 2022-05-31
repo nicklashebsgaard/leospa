@@ -69,9 +69,9 @@ const FooterContact = () => {
                     <div className="gridBox">
                         <div><h5>Address</h5></div>
                         <div><p>{footerInfo.name}</p></div>
-                        <div><p>CVR: {footerInfo.cvr}</p></div>
                         <div><p>{footerInfo.address}</p></div>
                         <div><p>{footerInfo.zipncity}</p></div>
+                        <div><p>CVR: {footerInfo.cvr}</p></div>
                     </div>
                     
                 </div>
@@ -96,6 +96,8 @@ const FooterContact = () => {
             </div>
         )}
 
+      {fejl && <p>fejl</p>}
+      
     </>
 
   );

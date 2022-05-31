@@ -128,7 +128,6 @@ nav{
         padding: 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
-       
     }
 
     nav .navWrapper ul {
@@ -141,5 +140,9 @@ nav{
 
     .wrapperContainer .textContainer {
         padding: 0% 5%;
+    }
+
+    .burgerMenuContainer #hamBurger {
+        padding: 10px 10px 0px 0px;
     }
 }

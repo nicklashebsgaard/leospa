@@ -37,7 +37,6 @@
   color: rgb(26, 24, 24);
 }
 
-
 $Tablet: 1250px;
 @mixin tablet {
   @media (max-width: #{$Tablet}){

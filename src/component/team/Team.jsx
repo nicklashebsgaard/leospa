@@ -50,7 +50,7 @@ const Team = () => {
 
     <>
 
-      <section>
+      <section id="team">
 
         <>
 

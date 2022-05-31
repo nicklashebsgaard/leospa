@@ -58,8 +58,8 @@ const EmailForm = () => {
             <img src={Appointment} alt="Appointment" loading="lazy" />
         </div>
 
-{
-        treatment && <div className="formContainer">
+      
+        {treatment && <div className="formContainer">
             <form action="#" autoComplete="on">
 
                 <div className="Name">
@@ -100,9 +100,10 @@ const EmailForm = () => {
                 </div>
                 
             </form>
-        </div>
-        }
-
+        </div>}
+        
+      {fejl && <p>fejl</p> }      
+       
     </div>
 
   );

@@ -3,6 +3,8 @@ import "./layout.scss";
 
 // REACT
 import React from 'react';
+
+// COMPONENT
 import Footer from "./footer/Footer";
 
 const Layout = ({children}) => {

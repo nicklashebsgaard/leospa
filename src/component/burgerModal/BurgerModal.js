@@ -3,11 +3,11 @@ import "./burgermenu.scss";
 
 const BurgerModal = ({closeBurgerMenu}) => {
 
-  const burgerikon = document.querySelector('#hamBurger');
-  burgerikon.classList.add('showNone') // Tilføjer display none
+  const burgericon = document.querySelector('#hamBurger');
+  burgericon.classList.add('showNone') // Tilføjer display none
 
   const handleClose = () => {
-    burgerikon.classList.remove('showNone'); // fjener display none 
+    burgericon.classList.remove('showNone'); // fjener display none 
     closeBurgerMenu(false)
   }
 
