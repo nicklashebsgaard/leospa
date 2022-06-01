@@ -10,6 +10,7 @@ import { hentRecommendation } from "../../helpers/apikald";
 // IMAGES
 import QuoteImage from "./../../assets/image/quote.png";
 import Logo from "./../../assets/image/logo.png";
+
 const RecommendationSite = () => {
 
   // STATE
