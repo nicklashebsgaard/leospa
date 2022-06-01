@@ -7,8 +7,12 @@ import React, { useState, useEffect } from "react";
 // HELPERS API
 import { hentRecommendation } from "../../helpers/apikald";
 
+// React-router-dom
+import { Link } from "react-router-dom";
+
 // IMAGES
 import QuoteImage from "./../../assets/image/quote.png";
+
 
 const dotsArry = ["", "", ""];
 const delay = 4500;
@@ -91,7 +95,7 @@ const Slideshow = () => {
             recommendation.slice(0, 3).map(
               (item) =>
                 item && (
-
+          
             <div className="slide" key={item._id}>
               
               <div className="imgQuotes">
@@ -118,7 +122,7 @@ const Slideshow = () => {
                 </div>
               
             </div>
-
+          
             )
         )}
 

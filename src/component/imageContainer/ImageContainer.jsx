@@ -54,7 +54,7 @@ const ImageContainer = () => {
 
     <>
 
-      <section>
+      <section id="features">
      {/* <Carousel autoplay="true" wrapAround="true" autoplayInterval="3500" > */}
         <div className="imageContainer">
        

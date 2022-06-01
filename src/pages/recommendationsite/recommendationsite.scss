@@ -1,0 +1,83 @@
+@import "./../../global.scss";
+
+#recommendationSite {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: 0.4fr 1fr 1fr;
+    justify-items: center;
+    row-gap: 25px;
+    padding: 50px 0px;
+    background-color: rgb(139, 139, 139);
+    height: 100%;
+
+    .iconRecommendation {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        place-self: start;
+        padding-left: 80px;
+    }
+    .imgQuotes {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        align-self: center;
+        text-align: center;
+        .textContainerTop h1{
+            font-size: 3rem;
+            padding: 20px 0px;
+        }
+    }
+
+    /* START of mapping SCSS */ 
+
+    .recommendationContainer {
+        width: 350px;
+        background-color: rgb(249, 234, 236);
+        /* border: solid rgb(113, 113, 113) 1px; */
+        border-radius: 25px;
+    }
+
+    .recommendationContainer h2 {
+        color: rgb(0, 0, 0);
+        font-size: 1.5rem;
+    }
+
+    .recommendationContainer p {
+        padding: 10px 20px;
+        color: rgb(0, 0, 0);
+    }
+
+    .imageOfPerson {
+        padding: 10px 0px;
+        text-align: center;
+    }
+
+    .imageOfPerson img {
+        height: 115px;
+        border-radius: 25px;
+    }
+
+    .personName {
+        text-align: center;
+    }
+
+    .personName span, h2 {
+        padding: 2px;
+    }
+
+    .textContainerQ {
+        text-align: center;
+    }
+
+    h1,
+    h2,
+    p {
+        font-family: "Circular-Loom";
+    }
+    
+}
+
+@media (max-width: 1040px) {
+    .imgQuotes img {
+        display: none;
+    }
+}
