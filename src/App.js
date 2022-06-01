@@ -14,7 +14,7 @@ import PopularProcedures from './component/popularProcedures/PopularProcedures';
 import Team from "./component/team/Team";
 import EmailForm from './component/emailform/EmailForm';
 import Slideshow from './component/recommendation/Slideshow';
-
+import RecommendationSite from "./pages/recommendationsite/RecommendationSite";
 
 const App = () => {
 
@@ -24,6 +24,8 @@ const App = () => {
 
       <Layout>
         
+        <RecommendationSite />
+
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>

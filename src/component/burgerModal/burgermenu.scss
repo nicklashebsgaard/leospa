@@ -39,7 +39,7 @@
   height: 100vh;
   display: grid;
   background: rgb(249,234,236);
-  background: linear-gradient(120deg, rgb(249,234,236) 0%, rgb(173,192,192) 100%);
+  background: linear-gradient(120deg, rgb(249,234,236) 50%, rgb(173,192,192) 100%);
   animation: menuSlide 1s ease-out 0s;
 
   @keyframes menuSlide {
